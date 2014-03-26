@@ -1,0 +1,4 @@
+name = Canary Blocks
+description = Custom blocks for Canary
+core = 7.x
+Package = Canary

@@ -1,0 +1,19 @@
+//////////////////////////////
+// Body Element Extendable Classes
+//////////////////////////////
+
+$body-extendables-extended: false !default;
+
+@if not ($body-extendables-extended) {
+  %body-base {
+    @include body-base($extend: false);
+  }
+  %body-border {
+    @include body-border($extend: false);
+  }
+  %body-unpad {
+    @include body-unpad($extend: false);
+  }
+}
+
+$body-extendables-extended: true;

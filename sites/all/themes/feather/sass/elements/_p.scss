@@ -1,0 +1,36 @@
+//////////////////////////////
+// p Element
+//
+// The partial and folder structure for this element should be as follows:
+// _p.scss
+// p (folder)
+//   _mixins.scss
+//   _extends.scss
+//
+// Automatic Sass parsing is done through special comment blocks
+//  - Start styling block for base element: @{element}
+//  - End styling block for base element:   {element}@
+//
+//  - Start styling block for specific element configuration: @{element--configuration}
+//  - End styling block for specific element configuration:   {element--configuration}@
+//////////////////////////////
+
+@import 'p/mixins';
+@import 'p/extends';
+
+//////////////////////////////
+// Having $output-elements and $output-elements--p set to `true` will output the CSS elements for p Element
+$output-elements--p: true !default;
+@if $output-elements and $output-elements--p {
+//////////////////////////////
+
+//////////////////////////////
+// @{p}
+// Baseline p Styling
+p {
+  @extend %p-base;
+}
+// {p}@
+//////////////////////////////
+
+}

@@ -1,0 +1,13 @@
+//////////////////////////////
+// p Element Extendable Classes
+//////////////////////////////
+
+$p-extendables-extended: false !default;
+
+@if not ($p-extendables-extended) {
+  %p-base {
+    @include p-base($extend: false);
+  }
+}
+
+$p-extendables-extended: true;
