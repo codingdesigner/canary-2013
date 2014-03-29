@@ -40,9 +40,9 @@ time, mark, audio, video {
 // html {
 //   @include reset-body;
 // }
-ol, ul {
-  @include reset-list-style;
-}
+// ol, ul {
+//   @include reset-list-style;
+// }
 table {
   @include reset-table;
 }
