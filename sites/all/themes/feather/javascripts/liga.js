@@ -33,6 +33,20 @@
 			'next': '&#xe604;',
 			'menulist': '&#xe605;',
 			'list': '&#xe605;',
+			'mail': '&#xe600;',
+			'email': '&#xe600;',
+			'rss': '&#xe606;',
+			'feed': '&#xe606;',
+			'play': '&#xe607;',
+			'github': '&#xe608;',
+			'flickr': '&#xe609;',
+			'twitter': '&#xe60a;',
+			'facebook': '&#xe60b;',
+			'googleplus': '&#xe60c;',
+			'pinterest': '&#xe60d;',
+			'linkedin': '&#xe60e;',
+			'rdio': '&#xe60f;',
+			'instagram': '&#xe610;',
 			'0': 0
 		};
 		delete icons['0'];
