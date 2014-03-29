@@ -35,7 +35,9 @@ $output-selectors--list: true !default;
 //////////////////////////////
 // @{list--inline}
 // Inline styling for List Component
-
+.inline-list {
+  @extend %inline-list;
+}
 // {list--inline}@
 //////////////////////////////
 
@@ -43,7 +45,9 @@ $output-selectors--list: true !default;
 //////////////////////////////
 // @{list--no-bullets}
 // No-bullets styling for List Component
-
+.no-bullets {
+  @extend %no-bullets;
+}
 // {list--no-bullets}@
 //////////////////////////////
 
