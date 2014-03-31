@@ -15,7 +15,8 @@ module.exports = function (grunt) {
         }
       },
       css: {
-        files: ['stylesheets/{,**/}*.css']
+        files: ['css/{,**/}*.css'],
+        tasks: ['copy:dev']
       },
       images: {
         files: ['images/**']
@@ -114,6 +115,16 @@ module.exports = function (grunt) {
     },
 
     copy: {
+      dev: {
+        files: [
+          {
+            expand: true,
+            src: 'css/*',
+            dest: '../../../../patternlab/source/',
+            filter: 'isFile'
+          }
+        ]
+      },
       dist: {
         files: [
           {
