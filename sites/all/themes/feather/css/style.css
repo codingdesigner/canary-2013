@@ -308,7 +308,7 @@ th {
   font-weight: bold;
 }
 
-.a11y--element-invisible {
+.a11y--element-invisible, .element-invisible {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
