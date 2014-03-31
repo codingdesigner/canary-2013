@@ -30,6 +30,10 @@ $output-selectors--a11y: true !default;
 .a11y--element-invisible {
   @extend %a11y-hidden-base-extend;
 }
+
+.element-invisible {
+  @extend %a11y-hidden-base-extend;
+}
 // {a11y--element-invisible}@
 //////////////////////////////
 
