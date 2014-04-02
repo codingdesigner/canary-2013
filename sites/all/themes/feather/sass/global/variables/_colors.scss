@@ -19,7 +19,8 @@ $cs-primary         : $orange;
 //////////////////////////////
 // derived colors
 $gray-extra-light   : adjust-color($gray-light, $lightness: 30%);
-$cool-white         : tint($blue, 95%);
+$cool-white         : tint($blue, 98%);
+$cool-white-shade   : shade($cool-white, 2%);
 $orange-dark        : adjust-color($orange, $lightness: -10%);
 $orange-darker      : adjust-color($orange, $lightness: -15%);
 $orange-light       : tint($orange, 55%);;

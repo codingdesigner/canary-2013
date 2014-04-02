@@ -1,5 +1,6 @@
 // COLORS
 .sg-swatch {
+  @extend %no-bullets;
   &.black { background-color: $black; }
   &.white { background-color: $white; }
   &.orange { background-color: $orange; }
@@ -14,12 +15,16 @@
   &.gray-lighter { background-color: $gray-lighter; }
   &.gray-extra-light { background-color: $gray-extra-light; }
   &.cool-white { background-color: $cool-white; }
+  &.cool-white-shade { background-color: $cool-white-shade; }
   &.orange-dark { background-color: $orange-dark; }
   &.orange-darker { background-color: $orange-darker; }
   &.orange-light { background-color: $orange-light; }
   &.blue-dark { background-color: $blue-dark; }
   &.gray-trans { background-color: $gray-trans; }
   &.blue-slate-mult { background-color: $blue-slate-mult; }
+}
+.sg-label {
+  @include ellipsis();
 }
 
 // TYPE

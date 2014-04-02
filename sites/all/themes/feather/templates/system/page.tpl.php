@@ -82,6 +82,20 @@
       <?php print render($page['main_prefix']); ?>
     <?php endif; ?>
 
+    <?php if ($title_prefix): ?>
+      <?php print $title_prefix; ?>
+    <?php endif; ?>
+    <?php if ($title): ?>
+      <?php if (!$page): ?>
+        <h2 class="node-title"><?php print $title; ?></h2>
+      <?php else: ?>
+        <h1 class="page-title"><?php print $title; ?></h1>
+      <?php endif; ?>
+    <?php endif; ?>
+    <?php if ($title_suffix): ?>
+      <?php print $title_suffix; ?>
+    <?php endif; ?>
+
     <?php if ($page['content']): ?>
       <?php print render($page['content']); ?>
     <?php endif; ?>
