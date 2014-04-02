@@ -13,7 +13,9 @@
 		},
 		"square": {
 			"src": "../../images/fpo_square.png",
-			"alt": "Square Thumbnail"
+			"alt": "Square Thumbnail",
+			"caption" : "Peter Venkman busts a ghost.",
+			"credit" : "Photo by Egon Spengler"
 		},
 		"avatar" : {
 			"src" : "../../images/fpo_avatar.png",
@@ -106,6 +108,7 @@
 		{"label": "green"},
 		{"label": "white"},
 		{"label": "cool-white"},
+		{"label": "cool-white-shade"},
 		{"label": "gray-lighter"},
 		{"label": "gray-extra-light"},
 		{"label": "gray-trans"},
