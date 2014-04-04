@@ -9,6 +9,7 @@ $orange-block-link-extend: true !default;
 $article-heading-extend: true !default;
 $heading-to-label-extend: true !default;
 $page-title-extend: true !default;
+$field-subtitle-extend: true !default;
 //////////////////////////////
 
 @mixin orange-block($extend: $orange-block-extend) {
@@ -76,12 +77,54 @@ $page-title-extend: true !default;
   @else {
     position: relative;
     margin-bottom: em(50px, nth($heading-sizes, 1));
+    margin-left: em(-4px, nth($heading-sizes, 1));
+    margin-right: em(14px, nth($heading-sizes, 1));
+    min-width: 50%;
+    -webkit-filter: drop-shadow($white 0 4px 0);
+    filter: drop-shadow($white 0 4px 0);
+    @include breakpoint($bp-small-type) {
+      margin-left: em(-4px, nth($heading-sizes-small, 1));
+      margin-right: em(-4px, nth($heading-sizes-small, 1));
+    }
+    &:before {
+      @include triangle($cool-white, 0.5em, 0.5em, top right);
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: $space;
+    }
     &:after {
       @include triangle($orange, 0.5em, 1em, 180);
       position: absolute;
       top: 100%;
       left: 0.25em;
       content: $space;
+    }
+  }
+}
+
+@mixin field-subtitle($extend: $field-subtitle-extend) {
+  @if $extend {
+    @extend %page-title;
+  }
+  @else {
+    margin: {
+      top: em(-32px, nth($heading-sizes, 3));
+      right: em(14px, nth($heading-sizes, 3));
+      bottom: 1em;
+      left: em(-4px, nth($heading-sizes, 3));
+    }
+    padding: {
+      top: em(22px, nth($heading-sizes, 3));
+      right: 0.5em;
+      bottom: 0.5em;
+      left: em(10px, nth($heading-sizes, 3));
+    }
+    background-color: rgba($blue, 0.5);
+    color: white;
+    @include breakpoint($bp-small-type) {
+      margin-left: em(-4px, nth($heading-sizes-small, 3));
+      margin-right: em(-4px, nth($heading-sizes-small, 3));
     }
   }
 }

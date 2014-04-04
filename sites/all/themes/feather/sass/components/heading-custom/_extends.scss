@@ -28,6 +28,10 @@ $heading-custom-extendables-extended: false !default;
   %page-title {
     @include page-title(false);
   }
+
+  %field-subtitle {
+    @include field-subtitle(false);
+  }
 }
 
 $heading-custom-extendables-extended: true;

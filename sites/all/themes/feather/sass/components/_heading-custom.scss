@@ -37,6 +37,10 @@ h1[class*="title"] {
 .page-title {
   @extend %page-title;
 }
+
+.field-subtitle {
+  @extend %field-subtitle;
+}
 // {heading-custom}@
 //////////////////////////////
 
