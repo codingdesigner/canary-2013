@@ -75,16 +75,35 @@
   </header>
 <?php endif; ?>
 
+<?php if ($messages): ?>
+  <div id="messages"><div class="section clearfix">
+    <?php print $messages; ?>
+  </div></div> <!-- /.section, /#messages -->
+<?php endif; ?>
+
 <main id="main" role="main">
 
+  <?php //print $breadcrumb; ?>
+
+  <?php if ($tabs): ?>
+    <div class="tabs">
+      <?php print render($tabs); ?>
+    </div>
+  <?php endif; ?>
+  <?php print render($page['help']); ?>
+  <?php if ($action_links): ?>
+    <ul class="action-links">
+      <?php print render($action_links); ?>
+    </ul>
+  <?php endif; ?>
+
   <div class="body-wrapper">
+
     <?php if ($page['main_prefix']): ?>
       <?php print render($page['main_prefix']); ?>
     <?php endif; ?>
 
-    <?php if ($title_prefix): ?>
-      <?php print $title_prefix; ?>
-    <?php endif; ?>
+    <?php print render($title_prefix); ?>
     <?php if ($title): ?>
       <?php if (!$page): ?>
         <h2 class="node-title"><?php print $title; ?></h2>
@@ -92,9 +111,7 @@
         <h1 class="page-title"><?php print $title; ?></h1>
       <?php endif; ?>
     <?php endif; ?>
-    <?php if ($title_suffix): ?>
-      <?php print $title_suffix; ?>
-    <?php endif; ?>
+    <?php print render($title_suffix); ?>
 
     <?php if ($page['content']): ?>
       <?php print render($page['content']); ?>
@@ -110,6 +127,8 @@
       <?php print render($page['footer']); ?>
     </footer>
   <?php endif; ?>
+
+  <?php print $feed_icons; ?>
 
 </main>
 
