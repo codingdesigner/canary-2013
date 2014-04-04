@@ -32,7 +32,8 @@
 	},
 	"headline" : {
 		"short" : "Lorem ipsum dolor sit (37 characters)",
-		"medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
+		"medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)",
+		"long" : "Id sunt sit ad consectetur labore excepteur sunt in voluptate ex fugiat pariatur Lorem."
 	},
 	"excerpt" : {
 		"short" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
