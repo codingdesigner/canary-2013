@@ -1,7 +1,15 @@
 <!-- Begin Footer -->
-<footer class="footer" role="contentinfo">
-	<div class="lc">
-		<p class="copyright">&copy; 2013 Company Name. All rights reserved.</p>
-	</div>
+<footer id="footer" role="contentinfo">
+  <div id="block-canary-blocks-canary-address" class="block block-canary-blocks  block-canary-blocks-canary-address">
+    <section class="address">
+      <h1>Our Address</h1>
+      {{> molecules-address }}
+    </section>
+  </div>
+  <div id="block-user-login" class="block block-user  block-user-login">
+    <h2 class="title block-title">User login</h2>
+    {{> molecules-mini-login }}
+  </div>
+  {{> molecules-copyright }}
 </footer>
 <!-- End Footer -->

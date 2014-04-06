@@ -11,6 +11,10 @@
 			"src": "../../images/fpo_16x9.png",
 			"alt": "16x9 Image"
 		},
+		"logo": {
+			"src": "../../images/logo.png",
+			"alt": "Logo Image"
+		},
 		"square": {
 			"src": "../../images/fpo_square.png",
 			"alt": "Square Thumbnail",
@@ -29,6 +33,10 @@
 	"client" : {
 		"one" : "FringeArts",
 		"two" : "Knight Foundation"
+	},
+	"media" : {
+		"one" : "New York Times",
+		"two" : "Philadelphia Inquirer"
 	},
 	"headline" : {
 		"short" : "Lorem ipsum dolor sit (37 characters)",
@@ -50,6 +58,8 @@
 		"last": "Way",
 		"lasti": "W"
 	},
+	"email" : "mason@thecodingdesigner.com",
+	"phone" : "555-867-5309",
 	"year" : {
 		"long": "2013",
 		"short": "13"
