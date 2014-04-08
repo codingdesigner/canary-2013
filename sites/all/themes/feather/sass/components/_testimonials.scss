@@ -39,12 +39,6 @@ $output-selectors--testimonials: true !default;
   @extend %vertical-separation;
   article {
     @extend %vertical-separation-border;
-    h1 {
-      @extend %article-heading-blue;
-    }
-    footer {
-      @extend %blockquote-footer-extend;
-    }
     @include breakpoint($bp-testimonials-2col) {
       border-bottom: none;
       &:nth-of-type(odd) {

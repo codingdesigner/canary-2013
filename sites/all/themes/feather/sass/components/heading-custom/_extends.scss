@@ -14,9 +14,11 @@ $heading-custom-extendables-extended: false !default;
   }
 
   %article-heading {
+    @extend %headings-extend;
     @include article-heading(false);
   }
   %article-heading-blue {
+    @extend %headings-extend;
     @include article-heading(false);
     color: $blue;
   }
@@ -26,10 +28,12 @@ $heading-custom-extendables-extended: false !default;
   }
 
   %page-title {
+    @extend %h1;
     @include page-title(false);
   }
 
   %field-subtitle {
+    @extend %h3;
     @include field-subtitle(false);
   }
 }

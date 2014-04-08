@@ -4,8 +4,8 @@
 
 //////////////////////////////
 // p Element Default Variables
-$p-line-height: $base-line-height !default;
-$p-extend:      true !default;
+$p-line-height:  $base-line-height !default;
+$p-extend:       true !default;
 //////////////////////////////
 
 @mixin p-base($line-height: $p-line-height, $extend: $p-extend) {
@@ -15,4 +15,10 @@ $p-extend:      true !default;
   @else {
     @extend %p-base;
   }
+}
+
+@mixin p-adjust($size, $line-height: $base-line-px) {
+  font-size: em($size);
+  line-height: $line-height / ($base-font-size * unitless($size));
+  margin-bottom: em($line-height);
 }

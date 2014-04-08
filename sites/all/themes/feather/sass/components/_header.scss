@@ -135,6 +135,7 @@ $output-selectors--header: true !default;
 }
 
 .site-name {
+  @extend %headings-extend;
   margin-top: 0;
   margin-bottom: 0;
   color: $orange;

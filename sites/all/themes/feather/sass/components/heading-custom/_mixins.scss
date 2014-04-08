@@ -76,7 +76,6 @@ $field-subtitle-extend: true !default;
   }
   @else {
     position: relative;
-    margin-bottom: em(50px, nth($heading-sizes, 1));
     margin-left: em(-4px, nth($heading-sizes, 1));
     margin-right: em(14px, nth($heading-sizes, 1));
     min-width: 50%;

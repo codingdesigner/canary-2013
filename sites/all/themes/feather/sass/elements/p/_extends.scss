@@ -2,12 +2,10 @@
 // p Element Extendable Classes
 //////////////////////////////
 
-$p-extendables-extended: false !default;
-
-@if not ($p-extendables-extended) {
-  %p-base {
-    @include p-base($extend: false);
-  }
+%p-base {
+  @include p-base($extend: false);
 }
 
-$p-extendables-extended: true;
+%p-intro {
+  @include p-adjust(em(ms(1)), $base-line-px * 1.25);
+}

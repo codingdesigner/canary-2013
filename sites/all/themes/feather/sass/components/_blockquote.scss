@@ -29,6 +29,12 @@ $output-selectors--blockquote: true !default;
 // Styling for Blockquote Component
 blockquote {
   @extend %blockquote-quote-extend;
+  h1 {
+    @extend %article-heading-blue;
+  }
+  footer {
+    @extend %blockquote-footer-extend;
+  }
 }
 // {blockquote}@
 //////////////////////////////
