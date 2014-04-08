@@ -136,76 +136,82 @@ p {
   margin-bottom: 1.625em;
 }
 
-h1, h2, h3, .social-media .section-title, h4, h5, h6 {
+p.intro {
+  font-size: 1.37501em;
+  line-height: 1.47727;
+  margin-bottom: 2.03125em;
+}
+
+.base--STYLED h1, .page-title, .base--STYLED h2, .base--STYLED h3, .field-subtitle, .section-title, .social-media .section-title, .base--STYLED h4, .base--STYLED h5, .base--STYLED h6, .site-name, .bird-feed article > h1, blockquote h1 {
   font-family: "Archer SSm A", "Archer SSm B", serif;
   font-weight: normal;
 }
 
-h1 {
+.base--STYLED h1, .page-title {
   font-size: 1.99999em;
   line-height: 1.21876;
   margin-bottom: 0.8125em;
 }
 @media (max-width: 31.25em) {
-  h1 {
+  .base--STYLED h1, .page-title {
     font-size: 1.94455em;
     line-height: 1.2535;
     margin-bottom: 0.83567em;
   }
 }
 
-h2 {
+.base--STYLED h2 {
   font-size: 1.94455em;
   line-height: 1.2535;
   margin-bottom: 0.83567em;
 }
 @media (max-width: 31.25em) {
-  h2 {
+  .base--STYLED h2 {
     font-size: 1.41421em;
     line-height: 1.43631;
     margin-bottom: 1.14905em;
   }
 }
 
-h3, .social-media .section-title {
+.base--STYLED h3, .field-subtitle, .section-title, .social-media .section-title {
   font-size: 1.41421em;
   line-height: 1.43631;
   margin-bottom: 1.14905em;
 }
 @media (max-width: 31.25em) {
-  h3, .social-media .section-title {
+  .base--STYLED h3, .field-subtitle, .section-title, .social-media .section-title {
     font-size: 1.37501em;
     line-height: 1.18181;
     margin-bottom: 1.18181em;
   }
 }
 
-h4 {
+.base--STYLED h4 {
   font-size: 1.37501em;
   line-height: 1.18181;
 }
 @media (max-width: 31.25em) {
-  h4 {
+  .base--STYLED h4 {
     font-size: 1em;
   }
 }
 
-h5 {
+.base--STYLED h5 {
   font-size: 1.37501em;
   line-height: 1.18181;
 }
 @media (max-width: 31.25em) {
-  h5 {
+  .base--STYLED h5 {
     font-size: 1em;
   }
 }
 
-h6 {
+.base--STYLED h6 {
   font-size: 1.37501em;
   line-height: 1.18181;
 }
 @media (max-width: 31.25em) {
-  h6 {
+  .base--STYLED h6 {
     font-size: 1em;
   }
 }
@@ -243,20 +249,20 @@ a:active {
   border-bottom-color: #f08c49;
 }
 
-.menu-trigger, h1[class*="title"] a, .press-room li a, .social-media a {
+.menu-trigger, .section-title a, .press-room li a, .social-media a {
   text-decoration: none;
   border-bottom: none;
 }
-.menu-trigger:visited, h1[class*="title"] a:visited, .press-room li a:visited, .social-media a:visited {
+.menu-trigger:visited, .section-title a:visited, .press-room li a:visited, .social-media a:visited {
   border-bottom: none;
 }
-.menu-trigger:focus, h1[class*="title"] a:focus, .press-room li a:focus, .social-media a:focus {
+.menu-trigger:focus, .section-title a:focus, .press-room li a:focus, .social-media a:focus {
   border-bottom: none;
 }
-.menu-trigger:hover, h1[class*="title"] a:hover, .press-room li a:hover, .social-media a:hover {
+.menu-trigger:hover, .section-title a:hover, .press-room li a:hover, .social-media a:hover {
   border-bottom: none;
 }
-.menu-trigger:active, h1[class*="title"] a:active, .press-room li a:active, .social-media a:active {
+.menu-trigger:active, .section-title a:active, .press-room li a:active, .social-media a:active {
   border-bottom: none;
 }
 
@@ -1104,11 +1110,11 @@ blockquote:before {
   line-height: 1;
 }
 
-.testimonials article footer {
+blockquote footer {
   color: #da6212;
   text-align: right;
 }
-.testimonials article footer:before {
+blockquote footer:before {
   margin-right: 0.25em;
   color: #13769d;
   content: "~";
@@ -1176,7 +1182,7 @@ button:active, input[type='submit']:active, input[type='reset']:active, input[ty
   background-color: #a56939;
 }
 
-h1[class*="title"] {
+.section-title, .page-title {
   margin-bottom: 1em;
   margin-top: 0;
   padding: 0.25em 0.28125em;
@@ -1184,22 +1190,22 @@ h1[class*="title"] {
   color: #fefefe;
 }
 
-h1[class*="title"] a {
+.section-title a {
   color: #fefefe;
 }
-h1[class*="title"] a:visited {
+.section-title a:visited {
   color: #fefefe;
 }
-h1[class*="title"] a:focus {
+.section-title a:focus {
   color: #fefefe;
 }
-h1[class*="title"] a:hover {
+.section-title a:hover {
   color: #fefefe;
 }
-h1[class*="title"] a:active {
+.section-title a:active {
   color: #fefefe;
 }
-h1[class*="title"] a:hover {
+.section-title a:hover {
   text-shadow: #13769d 2px 2px 0;
 }
 
@@ -1210,7 +1216,7 @@ h1[class*="title"] a:hover {
   line-height: 1.41422em;
 }
 
-.testimonials article h1 {
+blockquote h1 {
   margin-bottom: 0.25em;
   color: #13769d;
   font-size: 1.41421em;
@@ -1234,7 +1240,6 @@ h1[class*="title"] a:hover {
 
 .page-title {
   position: relative;
-  margin-bottom: 1.56251em;
   margin-left: -0.125em;
   margin-right: 0.4375em;
   min-width: 50%;
