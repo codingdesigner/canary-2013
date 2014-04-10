@@ -1,0 +1,21 @@
+//////////////////////////////
+// user-generated Component
+//
+// The partial and folder structure for this component should be as follows:
+// _user-generated.scss
+// user-generated (folder)
+//   _mixins.scss
+//   _extends.scss
+//////////////////////////////
+
+@import "user-generated/mixins";
+@import "user-generated/extends";
+
+.fluid-media {
+  @extend %body-unpad;
+}
+
+.file-video {
+  @extend %body-unpad;
+  @include ir(640/380, 100%, "iframe");
+}

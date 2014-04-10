@@ -18,15 +18,7 @@
 @import "feature/mixins";
 @import "feature/extends";
 
-//////////////////////////////
-// Having $output-selectors and $output-selectors--feature set to `true` will output the CSS selectors for FeatureComponent
-$output-selectors--feature: true !default;
-@if $output-selectors and $output-selectors--feature {
-//////////////////////////////
 
-//////////////////////////////
-// @{feature}
-// Styling for Feature Component
 .hero {
   position: relative;
   margin: 0 0 0 0;
@@ -67,15 +59,10 @@ $output-selectors--feature: true !default;
     }
   }
 }
-// {feature}@
-//////////////////////////////
 
-
-//////////////////////////////
-// @{feature--hero}
-// Hero styling for Feature Component
-
-// {feature--hero}@
-//////////////////////////////
-
+.hero-image {
+  margin: {
+    left: -0.25em;
+    right: -0.25em;
+  }
 }

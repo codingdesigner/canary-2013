@@ -35,13 +35,13 @@ $support-for-original-webkit-gradients : false !default;
 @import "compass/support";
 @import "global/functions/all";
 @import "global/variables/all";
+@import "elements/reset";
 @import "global/mixins/all";
 @import "global/extends/all";
 // //////////////////////////////
 
 //////////////////////////////
 // ELEMENTS
-@import "elements/reset";
 @import "elements/html";
 @import "elements/body";
 @import "elements/p";
@@ -49,6 +49,7 @@ $support-for-original-webkit-gradients : false !default;
 @import "elements/link";
 @import "elements/form";
 @import "elements/table";
+@import "elements/inline";
 //////////////////////////////
 
 //////////////////////////////
@@ -62,6 +63,7 @@ $support-for-original-webkit-gradients : false !default;
 @import "components/blockquote";
 @import "components/button";
 @import "components/heading-custom";
+@import "components/links";
 @import "components/list";
 @import "components/message";
 @import "components/pager";
@@ -72,6 +74,7 @@ $support-for-original-webkit-gradients : false !default;
 @import "components/press";
 @import "components/social-link";
 @import "components/testimonials";
+@import "components/user-generated";
 //////////////////////////////
 
 //////////////////////////////

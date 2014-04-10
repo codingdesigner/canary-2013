@@ -2,16 +2,20 @@
 // List Component Extendable Classes
 //////////////////////////////
 
-$list-extendables-extended: false !default;
-
-@if not ($list-extendables-extended) {
-  %inline-list {
-    @include inline-list;
-  }
-
-  %no-bullets {
-    @include no-bullets;
-  }
+%inline-list {
+  @include inline-list;
 }
 
-$list-extendables-extended: true;
+%no-bullets {
+  @include no-bullets;
+}
+
+%no-bullets-left {
+  @extend %no-bullets;
+  padding-left: 0;
+}
+
+%list-item-padding {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}

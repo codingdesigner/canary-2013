@@ -6,30 +6,16 @@
 // heading-custom (folder)
 //   _mixins.scss
 //   _extends.scss
-//
-// Automatic Sass parsing is done through special comment blocks
-//  - Start styling block for base component: @{component}
-//  - End styling block for base component:   {component}@
-//
-//  - Start styling block for specific component configuration: @{component--configuration}
-//  - End styling block for specific component configuration:   {component--configuration}@
 //////////////////////////////
 
 @import "heading-custom/mixins";
 @import "heading-custom/extends";
 
-//////////////////////////////
-// Having $output-selectors and $output-selectors--heading-custom set to `true` will output the CSS selectors for Heading-customComponent
-$output-selectors--heading-custom: true !default;
-@if $output-selectors and $output-selectors--heading-custom {
-//////////////////////////////
 
-//////////////////////////////
-// @{heading-custom}
-// Styling for Heading-custom Component
 .section-title {
-  @extend %h3;
-  @extend %orange-block;
+  // @extend %h3;
+  // @extend %orange-block;
+  @extend %section-title;
   a {
     @extend %orange-block-link;
   }
@@ -43,15 +29,8 @@ $output-selectors--heading-custom: true !default;
 .field-subtitle {
   @extend %field-subtitle;
 }
-// {heading-custom}@
-//////////////////////////////
 
-
-//////////////////////////////
-// @{heading-custom--base}
-// Base styling for Heading-custom Component
-
-// {heading-custom--base}@
-//////////////////////////////
-
+.typography--BLOCK-HEADING {
+  @extend %h3;
+  @extend %subsection-title;
 }
