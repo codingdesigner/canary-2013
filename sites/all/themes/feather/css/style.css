@@ -10,30 +10,6 @@ img, video {
   height: auto;
 }
 
-input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=time], input[type=number], input[type=range], input[type=search], input[type=color], select, textarea {
-  max-width: 100%;
-}
-
-.tagline .amp {
-  font-family: "Archer SSm A", "Archer SSm B", serif;
-}
-
-blockquote:before, .font-secondary {
-  font-family: "Archer SSm A", "Archer SSm B", serif;
-  font-weight: 500;
-}
-
-[role="navigation"], .font-secondary-smallcaps {
-  font-family: "Archer SSm small caps A", "Archer SSm small caps B", serif;
-  font-weight: 500;
-}
-
-.tagline, .font-smallcaps {
-  font-size: 14px;
-  font-family: "Whitney SSm small caps A", "Whitney SSm small caps B", sans-serif;
-  line-height: 1.1;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -87,6 +63,50 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=time], input[type=number], input[type=range], input[type=search], input[type=color], select, textarea {
+  max-width: 100%;
+}
+
+.page-title, .section-title, .typography--BLOCK-HEADING {
+  position: relative;
+}
+
+.page-title:before, .section-title:before, .typography--BLOCK-HEADING:before, .page-title:after {
+  position: absolute;
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
+}
+
+.tagline .amp {
+  font-family: "Archer SSm A", "Archer SSm B", serif;
+}
+
+blockquote:before, .font-secondary {
+  font-family: "Archer SSm A", "Archer SSm B", serif;
+  font-weight: 500;
+}
+
+[role="navigation"], .font-secondary-smallcaps {
+  font-family: "Archer SSm small caps A", "Archer SSm small caps B", serif;
+  font-weight: 500;
+}
+
+.tagline, .font-smallcaps {
+  font-size: 14px;
+  font-family: "Whitney SSm small caps A", "Whitney SSm small caps B", sans-serif;
+  line-height: 1.1;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
 html {
   font-size: 1em;
   line-height: 1.625;
@@ -117,12 +137,12 @@ body {
   }
 }
 
-.site-header {
+.site-header, .fluid-media, .file-video {
   margin-left: -0.25em;
   margin-right: -0.25em;
 }
 @media (min-width: 48.75em) {
-  .site-header {
+  .site-header, .fluid-media, .file-video {
     border-left-width: 0.75em;
     border-right-width: 0.75em;
   }
@@ -142,7 +162,7 @@ p.intro {
   margin-bottom: 2.03125em;
 }
 
-.base--STYLED h1, .page-title, .base--STYLED h2, .base--STYLED h3, .field-subtitle, .section-title, .social-media .section-title, .base--STYLED h4, .base--STYLED h5, .base--STYLED h6, .site-name, .bird-feed article > h1, blockquote h1 {
+.base--STYLED h1, .page-title, .base--STYLED h2, .base--STYLED h3, .field-subtitle, .section-title, .typography--BLOCK-HEADING, .social-media .section-title, .base--STYLED h4, .base--STYLED h5, .base--STYLED h6, .site-name, .bird-feed article > h1, blockquote h1 {
   font-family: "Archer SSm A", "Archer SSm B", serif;
   font-weight: normal;
 }
@@ -173,25 +193,25 @@ p.intro {
   }
 }
 
-.base--STYLED h3, .field-subtitle, .section-title, .social-media .section-title {
+.base--STYLED h3, .field-subtitle, .section-title, .typography--BLOCK-HEADING, .social-media .section-title {
   font-size: 1.41421em;
   line-height: 1.43631;
   margin-bottom: 1.14905em;
 }
 @media (max-width: 31.25em) {
-  .base--STYLED h3, .field-subtitle, .section-title, .social-media .section-title {
+  .base--STYLED h3, .field-subtitle, .section-title, .typography--BLOCK-HEADING, .social-media .section-title {
     font-size: 1.37501em;
     line-height: 1.18181;
     margin-bottom: 1.18181em;
   }
 }
 
-.base--STYLED h4 {
+.base--STYLED h4, .typography--BLOCK-HEADING {
   font-size: 1.37501em;
   line-height: 1.18181;
 }
 @media (max-width: 31.25em) {
-  .base--STYLED h4 {
+  .base--STYLED h4, .typography--BLOCK-HEADING {
     font-size: 1em;
   }
 }
@@ -533,6 +553,10 @@ th {
 
 .press-room li {
   border-bottom: 0.0625em dashed rgba(135, 135, 133, 0.5);
+}
+
+[class^='external-links'] li:not(:last-child) {
+  border-bottom: 0.0625em solid #ececec;
 }
 
 .menu-trigger {
@@ -1209,6 +1233,14 @@ button:active, input[type='submit']:active, input[type='reset']:active, input[ty
   text-shadow: #13769d 2px 2px 0;
 }
 
+.typography--BLOCK-HEADING {
+  margin-bottom: 1em;
+  margin-top: 0;
+  padding: 0.25em 0.28125em;
+  background-color: #13769d;
+  color: #fefefe;
+}
+
 .bird-feed article > h1 {
   margin-bottom: 0.25em;
   color: #13769d;
@@ -1239,7 +1271,6 @@ blockquote h1 {
 }
 
 .page-title {
-  position: relative;
   margin-left: -0.125em;
   margin-right: 0.4375em;
   min-width: 50%;
@@ -1251,30 +1282,6 @@ blockquote h1 {
     margin-left: -0.12856em;
     margin-right: -0.12856em;
   }
-}
-.page-title:before {
-  display: block;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-right-color: #fafcfd;
-  border-width: 0em 0.5em 0.5em 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  content: "\0020";
-}
-.page-title:after {
-  display: block;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-top-color: #f08c49;
-  border-width: 0.5em 0.5em 0 0.5em;
-  position: absolute;
-  top: 100%;
-  left: 0.25em;
-  content: "\0020";
 }
 
 .field-subtitle {
@@ -1296,6 +1303,56 @@ blockquote h1 {
   }
 }
 
+.section-title {
+  margin-right: 0.61872em;
+  margin-left: -0.17678em;
+}
+@media (max-width: 31.25em) {
+  .section-title {
+    margin-left: -0.18182em;
+    margin-right: -0.18182em;
+  }
+}
+
+.typography--BLOCK-HEADING {
+  margin-right: 0.63636em;
+  margin-left: -0.18182em;
+}
+@media (max-width: 31.25em) {
+  .typography--BLOCK-HEADING {
+    margin-left: -0.25em;
+    margin-right: -0.25em;
+  }
+}
+
+.page-title:before, .section-title:before, .typography--BLOCK-HEADING:before {
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-color: #fafcfd;
+  border-width: 0em 0.5em 0.5em 0;
+  top: 0;
+  right: 0;
+  content: "\0020";
+}
+
+.page-title:after {
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-top-color: #f08c49;
+  border-width: 0.5em 0.5em 0 0.5em;
+  top: 100%;
+  left: 0.25em;
+  content: "\0020";
+}
+
+[class^='external-links'] ul {
+  margin-bottom: 1.625em;
+}
+
 .inline-list, .social-media ul {
   list-style-type: none;
 }
@@ -1305,13 +1362,22 @@ blockquote h1 {
   display: inline;
 }
 
-.no-bullets, .press-room ul, .sg-swatch {
+[class^='external-links'] ul, .no-bullets, .press-room ul, .sg-swatch {
   list-style: none;
 }
-.no-bullets li, .press-room ul li, .sg-swatch li {
+[class^='external-links'] ul li, .no-bullets li, .press-room ul li, .sg-swatch li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
+}
+
+[class^='external-links'] ul {
+  padding-left: 0;
+}
+
+[class^='external-links'] li {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
 }
 
 .message {
@@ -1495,6 +1561,11 @@ blockquote h1 {
   }
 }
 
+.hero-image {
+  margin-left: -0.25em;
+  margin-right: -0.25em;
+}
+
 .press-room li a {
   display: inline-block;
   padding-left: 1.5em;
@@ -1525,6 +1596,22 @@ blockquote h1 {
   .testimonials article:nth-of-type(odd):last-of-type {
     width: 100%;
   }
+}
+
+.file-video {
+  position: relative;
+  height: 0;
+  padding-top: 59.375%;
+  width: 100%;
+}
+.file-video iframe {
+  display: block;
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .sg-swatch.black {
