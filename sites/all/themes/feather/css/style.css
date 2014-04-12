@@ -67,11 +67,11 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
   max-width: 100%;
 }
 
-.page-title, .section-title, .typography--BLOCK-HEADING {
+.page-title, .section-title, .typography--BLOCK-HEADING, .file-download--image .linked-image {
   position: relative;
 }
 
-.page-title:before, .section-title:before, .typography--BLOCK-HEADING:before, .page-title:after {
+.page-title:before, .section-title:before, .typography--BLOCK-HEADING:before, .page-title:after, .file-download--image .linked-image:before, .file-download--image .linked-image:after {
   position: absolute;
 }
 
@@ -137,12 +137,12 @@ body {
   }
 }
 
-.site-header, .fluid-media, .file-video {
+.site-header, .fluid-media, .file-video, .file-downloads--client, .media-placements {
   margin-left: -0.25em;
   margin-right: -0.25em;
 }
 @media (min-width: 48.75em) {
-  .site-header, .fluid-media, .file-video {
+  .site-header, .fluid-media, .file-video, .file-downloads--client, .media-placements {
     border-left-width: 0.75em;
     border-right-width: 0.75em;
   }
@@ -162,7 +162,7 @@ p.intro {
   margin-bottom: 2.03125em;
 }
 
-.base--STYLED h1, .page-title, .base--STYLED h2, .base--STYLED h3, .field-subtitle, .section-title, .typography--BLOCK-HEADING, .social-media .section-title, .base--STYLED h4, .base--STYLED h5, .base--STYLED h6, .site-name, .bird-feed article > h1, blockquote h1 {
+.base--STYLED h1, .page-title, .base--STYLED h2, .base--STYLED h3, .field-subtitle, .section-title, .typography--BLOCK-HEADING, .social-media .section-title, .press-releases h3, .media-contact h3, .base--STYLED h4, .base--STYLED h5, .base--STYLED h6, .site-name, .bird-feed article > h1, blockquote h1, .placement .name {
   font-family: "Archer SSm A", "Archer SSm B", serif;
   font-weight: normal;
 }
@@ -193,13 +193,13 @@ p.intro {
   }
 }
 
-.base--STYLED h3, .field-subtitle, .section-title, .typography--BLOCK-HEADING, .social-media .section-title {
+.base--STYLED h3, .field-subtitle, .section-title, .typography--BLOCK-HEADING, .social-media .section-title, .press-releases h3, .media-contact h3 {
   font-size: 1.41421em;
   line-height: 1.43631;
   margin-bottom: 1.14905em;
 }
 @media (max-width: 31.25em) {
-  .base--STYLED h3, .field-subtitle, .section-title, .typography--BLOCK-HEADING, .social-media .section-title {
+  .base--STYLED h3, .field-subtitle, .section-title, .typography--BLOCK-HEADING, .social-media .section-title, .press-releases h3, .media-contact h3 {
     font-size: 1.37501em;
     line-height: 1.18181;
     margin-bottom: 1.18181em;
@@ -269,20 +269,20 @@ a:active {
   border-bottom-color: #f08c49;
 }
 
-.menu-trigger, .section-title a, .press-room li a, .social-media a {
+.menu-trigger, .section-title a, .press-room li a, .social-media a, .linked-image {
   text-decoration: none;
   border-bottom: none;
 }
-.menu-trigger:visited, .section-title a:visited, .press-room li a:visited, .social-media a:visited {
+.menu-trigger:visited, .section-title a:visited, .press-room li a:visited, .social-media a:visited, .linked-image:visited {
   border-bottom: none;
 }
-.menu-trigger:focus, .section-title a:focus, .press-room li a:focus, .social-media a:focus {
+.menu-trigger:focus, .section-title a:focus, .press-room li a:focus, .social-media a:focus, .linked-image:focus {
   border-bottom: none;
 }
-.menu-trigger:hover, .section-title a:hover, .press-room li a:hover, .social-media a:hover {
+.menu-trigger:hover, .section-title a:hover, .press-room li a:hover, .social-media a:hover, .linked-image:hover {
   border-bottom: none;
 }
-.menu-trigger:active, .section-title a:active, .press-room li a:active, .social-media a:active {
+.menu-trigger:active, .section-title a:active, .press-room li a:active, .social-media a:active, .linked-image:active {
   border-bottom: none;
 }
 
@@ -555,7 +555,7 @@ th {
   border-bottom: 0.0625em dashed rgba(135, 135, 133, 0.5);
 }
 
-[class^='external-links'] li:not(:last-child) {
+[class^='external-links'] ul li:not(:last-child), .press-releases ul li:not(:last-child) {
   border-bottom: 0.0625em solid #ececec;
 }
 
@@ -1272,10 +1272,11 @@ blockquote h1 {
 
 .page-title {
   margin-left: -0.125em;
-  margin-right: 0.4375em;
+  margin-right: -0.125em;
   min-width: 50%;
   -webkit-filter: drop-shadow(#fefefe 0 4px 0);
   filter: drop-shadow(#fefefe 0 4px 0);
+  -webkit-transform: translateZ(0);
 }
 @media (max-width: 31.25em) {
   .page-title {
@@ -1286,7 +1287,7 @@ blockquote h1 {
 
 .field-subtitle {
   margin-top: -1.41422em;
-  margin-right: 0.61872em;
+  margin-right: -0.17678em;
   margin-bottom: 1em;
   margin-left: -0.17678em;
   padding-top: 0.97227em;
@@ -1304,8 +1305,9 @@ blockquote h1 {
 }
 
 .section-title {
-  margin-right: 0.61872em;
+  margin-right: -0.17678em;
   margin-left: -0.17678em;
+  margin-bottom: 0;
 }
 @media (max-width: 31.25em) {
   .section-title {
@@ -1315,7 +1317,7 @@ blockquote h1 {
 }
 
 .typography--BLOCK-HEADING {
-  margin-right: 0.63636em;
+  margin-right: -0.18182em;
   margin-left: -0.18182em;
 }
 @media (max-width: 31.25em) {
@@ -1349,8 +1351,22 @@ blockquote h1 {
   content: "\0020";
 }
 
-[class^='external-links'] ul {
-  margin-bottom: 1.625em;
+.file-download--image .linked-image:before, .file-download--image .linked-image:after {
+  height: 0.75em;
+  width: 100%;
+  background-color: #fafcfd;
+  bottom: -1px;
+  content: "\0020";
+}
+.file-download--image .linked-image:before {
+  right: calc(100% - 1.5em);
+  -webkit-transform-origin: 0 100%;
+  -webkit-transform: skewX(45deg);
+}
+.file-download--image .linked-image:after {
+  left: 1.5em;
+  -webkit-transform-origin: 0 100%;
+  -webkit-transform: skewX(-45deg);
 }
 
 .inline-list, .social-media ul {
@@ -1362,20 +1378,20 @@ blockquote h1 {
   display: inline;
 }
 
-[class^='external-links'] ul, .no-bullets, .press-room ul, .sg-swatch {
+[class^='external-links'] ul, .press-releases ul, .media-placements ul, .no-bullets, .press-room ul, .sg-swatch {
   list-style: none;
 }
-[class^='external-links'] ul li, .no-bullets li, .press-room ul li, .sg-swatch li {
+[class^='external-links'] ul li, .press-releases ul li, .media-placements ul li, .no-bullets li, .press-room ul li, .sg-swatch li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
 }
 
-[class^='external-links'] ul {
+[class^='external-links'] ul, .press-releases ul, .media-placements ul {
   padding-left: 0;
 }
 
-[class^='external-links'] li {
+[class^='external-links'] ul li, .press-releases ul li {
   padding-top: 0.25em;
   padding-bottom: 0.25em;
 }
@@ -1612,6 +1628,100 @@ blockquote h1 {
   top: 0;
   margin: 0;
   padding: 0;
+}
+
+[class^='external-links'] ul, .press-releases ul {
+  margin-bottom: 1.625em;
+}
+
+.press-releases h3, .media-contact h3 {
+  margin-bottom: 0;
+}
+
+[class*="--EMBEDDED-BLOCK"] {
+  margin-bottom: 1.625em;
+}
+
+.press-releases {
+  margin-top: 1.625em;
+}
+
+.media-contact {
+  margin-top: 1.625em;
+  margin-bottom: 1.625em;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.label {
+  font-style: italic;
+}
+
+.file-downloads--client:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+._2-even .file-download--image:nth-of-type(odd) {
+  width: 48.64865%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: left;
+}
+._2-even .file-download--image:nth-of-type(even) {
+  width: 48.64865%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+
+.file-download--image {
+  margin-bottom: 1.625em;
+  overflow: hidden;
+}
+.file-download--image img {
+  vertical-align: text-bottom;
+}
+.file-download--image figcaption {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.file-download--image figcaption .credit {
+  color: #8e8e8e;
+}
+
+.media-placements:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+._2-even .placement:nth-of-type(odd) {
+  width: 48.64865%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: left;
+}
+._2-even .placement:nth-of-type(even) {
+  width: 48.64865%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+
+.placement {
+  margin-bottom: 1.625em;
+}
+.placement .name {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
 }
 
 .sg-swatch.black {
