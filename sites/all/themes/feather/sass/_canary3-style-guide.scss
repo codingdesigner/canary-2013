@@ -26,7 +26,7 @@ $support-for-original-webkit-gradients : false !default;
 @import "singularitygs";
 @import "modular-scale";
 @import "color-schemer";
-@import "singularity-extras";
+// @import "singularity-extras";
 ////////////////////////
 
 //////////////////////////////
@@ -75,6 +75,7 @@ $support-for-original-webkit-gradients : false !default;
 @import "components/social-link";
 @import "components/testimonials";
 @import "components/user-generated";
+@import "components/scratch";
 //////////////////////////////
 
 //////////////////////////////

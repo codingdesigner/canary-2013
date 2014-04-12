@@ -13,13 +13,6 @@
 
 [class^='external-links'] {
   ul {
-    @extend %no-bullets-left;
-    margin-bottom: $base-line-em;
-  }
-  li {
-    @extend %list-item-padding;
-    &:not(:last-child) {
-      @extend %border-bottom-light;
-    }
+    @extend %UL-narrow-list;
   }
 }

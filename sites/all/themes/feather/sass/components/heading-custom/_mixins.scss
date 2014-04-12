@@ -92,10 +92,11 @@ $field-section-title-extend: true !default;
   }
   @else {
     margin-left: em(-4px, nth($heading-sizes, 1));
-    margin-right: em(14px, nth($heading-sizes, 1));
+    margin-right: em(-4px, nth($heading-sizes, 1));
     min-width: 50%;
     -webkit-filter: drop-shadow($white 0 4px 0);
     filter: drop-shadow($white 0 4px 0);
+    -webkit-transform: translateZ(0); // fix webkit bug -- blurs when css filter is applied
     @include breakpoint($bp-small-type) {
       margin-left: em(-4px, nth($heading-sizes-small, 1));
       margin-right: em(-4px, nth($heading-sizes-small, 1));
@@ -112,7 +113,7 @@ $field-section-title-extend: true !default;
   @else {
     margin: {
       top: em(-32px, nth($heading-sizes, 3));
-      right: em(14px, nth($heading-sizes, 3));
+      right: em(-4px, nth($heading-sizes, 3));
       bottom: 1em;
       left: em(-4px, nth($heading-sizes, 3));
     }
@@ -137,8 +138,9 @@ $field-section-title-extend: true !default;
   }
   @else {
     margin: {
-      right: em(14px, nth($heading-sizes, 3));
+      right: em(-4px, nth($heading-sizes, 3));
       left: em(-4px, nth($heading-sizes, 3));
+      bottom: 0;
     }
     @include breakpoint($bp-small-type) {
       margin-left: em(-4px, nth($heading-sizes-small, 3));
@@ -153,7 +155,7 @@ $field-section-title-extend: true !default;
   }
   @else {
     margin: {
-      right: em(14px, nth($heading-sizes, 4));
+      right: em(-4px, nth($heading-sizes, 4));
       left: em(-4px, nth($heading-sizes, 4));
     }
     @include breakpoint($bp-small-type) {

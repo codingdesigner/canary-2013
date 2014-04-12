@@ -1,0 +1,123 @@
+//////////////////////////////
+// SCRATCH
+//////////////////////////////
+
+%UL-narrow-list {
+  @extend %no-bullets-left;
+  margin-bottom: $base-line-em;
+  li {
+    @extend %list-item-padding;
+    &:not(:last-child) {
+      @extend %border-bottom-light;
+    }
+  }
+}
+
+%subsection-block-heading {
+  @extend %h3;
+  margin-bottom: 0;
+}
+
+
+[class*="--EMBEDDED-BLOCK"] {
+  margin-bottom: $base-line-em;
+}
+
+.press-releases {
+  margin-top: $base-line-em;
+  h3 {
+    @extend %subsection-block-heading;
+  }
+  ul {
+    @extend %UL-narrow-list;
+  }
+}
+
+.media-contact {
+  margin-top: $base-line-em;
+  margin-bottom: $base-line-em;
+  h3 {
+    @extend %subsection-block-heading;
+  }
+}
+
+.name {
+  font-weight: 600;
+}
+.label {
+  font-style: italic;
+}
+
+
+$file-downloads-grid: 2;
+$file-downloads-gutter: 1/18;
+
+.file-downloads--client {
+  @extend %body-unpad;
+  @include clearfix;
+}
+
+._2-even {
+  .file-download--image {
+    @include layout($file-downloads-grid, $file-downloads-gutter) {
+      &:nth-of-type(odd) {
+        @include grid-span(1, 1, $options: ('clear' : left));
+      }
+      &:nth-of-type(even) {
+        @include grid-span(1, 2);
+      }
+    }
+  }
+}
+
+.file-download--image {
+  margin-bottom: $base-line-em;
+  overflow: hidden;
+  .linked-image {
+    @extend %triangle-image;
+  }
+  img {
+    vertical-align: text-bottom;
+  }
+  figcaption {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    .credit {
+      color: $gray;
+    }
+  }
+}
+
+.linked-image {
+  @extend %link-unset-borders-extend;
+}
+
+.media-placements {
+  @extend %body-unpad;
+  @include clearfix;
+  ul {
+    @extend %no-bullets-left;
+  }
+}
+
+._2-even {
+  .placement {
+    @include layout($file-downloads-grid, $file-downloads-gutter) {
+      &:nth-of-type(odd) {
+        @include grid-span(1, 1, $options: ('clear' : left));
+      }
+      &:nth-of-type(even) {
+        @include grid-span(1, 2);
+      }
+    }
+  }
+}
+
+.placement {
+  margin-bottom: $base-line-em;
+  .name {
+    @extend %headings-extend;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+  }
+}
