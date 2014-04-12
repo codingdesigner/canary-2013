@@ -1,9 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    breakpoint (2.4.1)
-      compass (~> 1.0.0.alpha.13)
-      sass (~> 3.3.0.rc.2)
+    breakpoint (2.4.2)
+      sass (~> 3.3.0)
       sassy-maps (< 1.0.0)
     chunky_png (1.3.0)
     color-schemer (0.2.8)
@@ -43,14 +42,15 @@ GEM
     sassy-maps (0.3.2)
       compass (~> 1.0.0.alpha.13)
       sass (~> 3.3.0.rc.2)
-    singularity-extras (1.0.0.alpha.3)
+    singularity-extras (1.0.0.alpha.2)
       modular-scale (~> 2.0.0.alpha5)
       singularitygs (~> 1.2.0.rc.1)
     singularitygs (1.2.0)
       breakpoint (~> 2.4)
       sass (~> 3.3.0)
-    toolkit (2.0.1)
-      sass (~> 3.3.0)
+    toolkit (2.0.0.alpha.10)
+      compass (~> 1.0.0.alpha.17)
+      sass (~> 3.3.0.rc.3)
 
 PLATFORMS
   ruby
@@ -61,5 +61,5 @@ DEPENDENCIES
   jacket (~> 1.0.0)
   modular-scale (~> 2.0.0.alpha5)
   singularity-extras (~> 1.0.0.alpha.1)
-  singularitygs (~> 1.2.0.rc.3)
+  singularitygs (~> 1.2.0)
   toolkit (~> 2.0.0.alpha.10)
