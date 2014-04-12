@@ -67,11 +67,11 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
   max-width: 100%;
 }
 
-.page-title, .section-title, .typography--BLOCK-HEADING, .file-download--image:nth-of-type(even) .linked-image, .file-download--image:nth-of-type(odd) .linked-image {
+.page-title, .section-title, .typography--BLOCK-HEADING, .file-download--image .linked-image {
   position: relative;
 }
 
-.page-title:before, .section-title:before, .typography--BLOCK-HEADING:before, .page-title:after, .file-download--image:nth-of-type(even) .linked-image:before, .file-download--image:nth-of-type(odd) .linked-image:before, .file-download--image:nth-of-type(even) .linked-image:after, .file-download--image:nth-of-type(odd) .linked-image:after {
+.page-title:before, .section-title:before, .typography--BLOCK-HEADING:before, .page-title:after, .file-download--image .linked-image:before, .file-download--image .linked-image:after {
   position: absolute;
 }
 
@@ -1276,6 +1276,7 @@ blockquote h1 {
   min-width: 50%;
   -webkit-filter: drop-shadow(#fefefe 0 4px 0);
   filter: drop-shadow(#fefefe 0 4px 0);
+  -webkit-transform: translateZ(0);
 }
 @media (max-width: 31.25em) {
   .page-title {
@@ -1350,42 +1351,22 @@ blockquote h1 {
   content: "\0020";
 }
 
-.file-download--image:nth-of-type(even) .linked-image:before, .file-download--image:nth-of-type(odd) .linked-image:before {
-  height: 0.5em;
-  width: calc(100% - 0.5em + 1px);
+.file-download--image .linked-image:before, .file-download--image .linked-image:after {
+  height: 0.75em;
+  width: 100%;
   background-color: #fafcfd;
   bottom: -1px;
   content: "\0020";
 }
-.file-download--image:nth-of-type(even) .linked-image:after, .file-download--image:nth-of-type(odd) .linked-image:after {
-  bottom: -1px;
-  content: "\0020";
+.file-download--image .linked-image:before {
+  right: calc(100% - 1.5em);
+  -webkit-transform-origin: 0 100%;
+  -webkit-transform: skewX(45deg);
 }
-
-.file-download--image:nth-of-type(even) .linked-image:before {
-  right: 0;
-}
-.file-download--image:nth-of-type(even) .linked-image:after {
-  display: block;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-bottom-color: #fafcfd;
-  border-width: 0 0em 0.5em 0.5em;
-  left: 0;
-}
-
-.file-download--image:nth-of-type(odd) .linked-image:before {
-  left: 0;
-}
-.file-download--image:nth-of-type(odd) .linked-image:after {
-  display: block;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-left-color: #fafcfd;
-  border-width: 0.5em 0 0em 0.5em;
-  right: 0;
+.file-download--image .linked-image:after {
+  left: 1.5em;
+  -webkit-transform-origin: 0 100%;
+  -webkit-transform: skewX(-45deg);
 }
 
 .inline-list, .social-media ul {
@@ -1684,15 +1665,15 @@ blockquote h1 {
   clear: both;
 }
 
-.file-download--image:nth-of-type(odd) {
-  width: 50%;
+._2-even .file-download--image:nth-of-type(odd) {
+  width: 48.64865%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: left;
 }
-.file-download--image:nth-of-type(even) {
-  width: 50%;
+._2-even .file-download--image:nth-of-type(even) {
+  width: 48.64865%;
   float: right;
   margin-left: 0;
   margin-right: 0;
@@ -1701,6 +1682,7 @@ blockquote h1 {
 
 .file-download--image {
   margin-bottom: 1.625em;
+  overflow: hidden;
 }
 .file-download--image img {
   vertical-align: text-bottom;
@@ -1719,22 +1701,23 @@ blockquote h1 {
   clear: both;
 }
 
-.placement {
-  margin-bottom: 1.625em;
-}
-.placement:nth-of-type(odd) {
-  width: 50%;
+._2-even .placement:nth-of-type(odd) {
+  width: 48.64865%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: left;
 }
-.placement:nth-of-type(even) {
-  width: 50%;
+._2-even .placement:nth-of-type(even) {
+  width: 48.64865%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
+}
+
+.placement {
+  margin-bottom: 1.625em;
 }
 .placement .name {
   padding-left: 0.25em;

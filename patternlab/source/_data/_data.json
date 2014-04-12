@@ -4,11 +4,11 @@
 	"bodyClass": "body",
 	"img": {
 		"landscape-4x3": {
-			"src": "../../images/fpo_4x3.png",
+			"src": "../../images/fm_4x3.png",
 			"alt": "4x3 Image"
 		},
 		"landscape-16x9": {
-			"src": "../../images/fpo_16x9.png",
+			"src": "../../images/fm_16x9.png",
 			"alt": "16x9 Image"
 		},
 		"logo": {
@@ -16,7 +16,7 @@
 			"alt": "Logo Image"
 		},
 		"square": {
-			"src": "../../images/fpo_square.png",
+			"src": "../../images/fm_square.png",
 			"alt": "Square Thumbnail",
 			"caption" : "Peter Venkman busts a ghost.",
 			"credit" : "Photo by Egon Spengler"
