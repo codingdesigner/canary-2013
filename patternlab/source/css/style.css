@@ -769,7 +769,6 @@ th {
     margin-right: -0.25em;
     padding: 0.5em 0 1.5em;
     background-color: #fefefe;
-    border-bottom: 1px solid #f5f6f7;
   }
 }
 @media (min-width: 48.75em) and (min-width: 48.75em) {
@@ -893,7 +892,7 @@ th {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('../images/feathers/feather.svg');
-  background-color: rgba(19, 118, 157, 0.1);
+  background-color: #e1edf2;
 }
 @media (min-width: 48.75em) {
   .site-header {
@@ -937,14 +936,14 @@ th {
 [role="main"] {
   padding-top: 5em;
 }
-@media (min-width: 48.75em) {
-  [role="main"] {
-    padding-top: 4em;
-  }
-}
 @media (min-width: 30em) and (min-height: 62.5em) {
   [role="main"] {
-    padding-top: 4em;
+    padding-top: 0;
+  }
+}
+@media (min-width: 48.75em) {
+  [role="main"] {
+    padding-top: 0;
   }
 }
 
@@ -1282,6 +1281,16 @@ blockquote h1 {
   .page-title {
     margin-left: -0.12856em;
     margin-right: -0.12856em;
+  }
+}
+@media (min-width: 30em) and (min-height: 62.5em) {
+  main .page-title:before {
+    border-right-color: #e1edf2;
+  }
+}
+@media (min-width: 48.75em) {
+  main .page-title:before {
+    border-right-color: #fefefe;
   }
 }
 
@@ -1733,6 +1742,9 @@ blockquote h1 {
 .sg-swatch.orange {
   background-color: #f08c49;
 }
+.sg-swatch.blue-very-light {
+  background-color: #e1edf2;
+}
 .sg-swatch.blue {
   background-color: #13769d;
 }
@@ -1794,6 +1806,50 @@ blockquote h1 {
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+}
+
+.ms-0 {
+  font-size: 16px;
+}
+
+.ms-1 {
+  font-size: 22.00011px;
+}
+
+.ms-2 {
+  font-size: 22.62736px;
+}
+
+.ms-3 {
+  font-size: 31.11278px;
+}
+
+.ms-4 {
+  font-size: 31.99984px;
+}
+
+.ms-5 {
+  font-size: 44px;
+}
+
+.ms-6 {
+  font-size: 45.25449px;
+}
+
+.ms-7 {
+  font-size: 62.22524px;
+}
+
+.ms-8 {
+  font-size: 63.99936px;
+}
+
+.ms-9 {
+  font-size: 87.99956px;
+}
+
+.ms-10 {
+  font-size: 90.50853px;
 }
 
 /*# sourceMappingURL=style.css.map */
