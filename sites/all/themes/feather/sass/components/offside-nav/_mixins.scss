@@ -120,7 +120,7 @@
   @include body-unpad($extend: false);
   padding: 0.5em 0 1.5em;
   background-color: $white;
-  border-bottom: 1px solid $cool-white-shade;
+  // border-bottom: 1px solid $cool-white-shade;
   ul {
     @include transform3d( translateY(0.75em) );
     @include display-flex;

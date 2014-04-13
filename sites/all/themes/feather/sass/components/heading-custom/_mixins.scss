@@ -103,6 +103,20 @@ $field-section-title-extend: true !default;
     }
     @extend %triangle-notch;
     @extend %triangle-speach;
+    @include breakpoint($bp-big-logo) {
+      &:before {
+        main & {
+          border-right-color: $blue-very-light;
+        }
+      }
+    }
+    @include breakpoint($bp-nav) {
+      &:before {
+        main & {
+          border-right-color: $white;
+        }
+      }
+    }
   }
 }
 

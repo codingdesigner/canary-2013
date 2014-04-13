@@ -4,6 +4,7 @@
   &.black { background-color: $black; }
   &.white { background-color: $white; }
   &.orange { background-color: $orange; }
+  &.blue-very-light { background-color: $blue-very-light; }
   &.blue { background-color: $blue; }
   &.blue-slate { background-color: $blue-slate; }
   &.green { background-color: $green; }
@@ -36,4 +37,11 @@
 }
 .font-secondary-smallcaps {
   @extend %slab-sc-medium;
+}
+
+// MODULAR SCALE
+@for $i from 0 through 10 {
+  .ms-#{$i} {
+    font-size: ms($i);
+  }
 }

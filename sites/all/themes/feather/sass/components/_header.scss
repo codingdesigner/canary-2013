@@ -6,27 +6,11 @@
 // header (folder)
 //   _mixins.scss
 //   _extends.scss
-//
-// Automatic Sass parsing is done through special comment blocks
-//  - Start styling block for base component: @{component}
-//  - End styling block for base component:   {component}@
-//
-//  - Start styling block for specific component configuration: @{component--configuration}
-//  - End styling block for specific component configuration:   {component--configuration}@
 //////////////////////////////
 
 @import "header/mixins";
 @import "header/extends";
 
-//////////////////////////////
-// Having $output-selectors and $output-selectors--header set to `true` will output the CSS selectors for HeaderComponent
-$output-selectors--header: true !default;
-@if $output-selectors and $output-selectors--header {
-//////////////////////////////
-
-//////////////////////////////
-// @{header}
-// Styling for Header Component
 .site-header {
   @extend %body-unpad;
   position: relative;
@@ -40,7 +24,7 @@ $output-selectors--header: true !default;
     size: cover;
     repeat: no-repeat;
     image: image-url('feathers/feather.svg');
-    color: rgba($blue, 0.1);
+    color: $blue-very-light;
   }
   @include breakpoint($bp-nav) {
     background-position: 50% 10%;
@@ -74,11 +58,11 @@ $output-selectors--header: true !default;
 
 [role="main"] {
   padding-top: 5em;
-  @include breakpoint($bp-nav) {
-    padding-top: 4em;
-  }
   @include breakpoint($bp-big-logo) {
-    padding-top: 4em;
+    padding-top: 0;
+  }
+  @include breakpoint($bp-nav) {
+    padding-top: 0;
   }
 }
 
@@ -227,17 +211,4 @@ $output-selectors--header: true !default;
       @include transform3d( scale(1.5) translateY(1px) );
     }
   }
-}
-
-// {header}@
-//////////////////////////////
-
-
-//////////////////////////////
-// @{header--site-header}
-// Site_header styling for Header Component
-
-// {header--site-header}@
-//////////////////////////////
-
 }
