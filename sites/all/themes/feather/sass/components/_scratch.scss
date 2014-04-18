@@ -121,3 +121,60 @@ $file-downloads-gutter: 1/18;
     padding-right: 0.25em;
   }
 }
+
+
+// client layout
+// $intro-image-quote-grid: 2;
+// $intro-image-quote-gutter: 1/18;
+._client {
+  @include breakpoint(620px) {
+    .hero-image {
+      float: right;
+      width: calc(50% - 0.5em);
+      margin-left: 1em;
+    }
+  }
+  @include breakpoint(800px) {
+    .intro {
+      float: left;
+      width: calc(50% - 0.5em);
+    }
+    .hero-image {
+      float: right;
+      width: calc(50% - 0.5em);
+      margin-left: auto;
+    }
+    .testimonial {
+      clear: both;
+    }
+    .our-work {
+      clear: both;
+    }
+  }
+  @include breakpoint(960px) {
+    .intro {
+    }
+    .hero-image {
+    }
+    .testimonial {
+      float: left;
+      width: calc(50% - 0.5em);
+      clear: left;
+    }
+  }
+  @include breakpoint(1220px) {
+    .intro {
+      float: left;
+      width: calc(33% - 0.5em);
+    }
+    .hero-image {
+      float: right;
+      width: calc(33% - 0.5em);
+    }
+    .testimonial {
+      float: left;
+      width: calc(33% - 0.5em);
+      clear: none;
+    }
+  }
+}

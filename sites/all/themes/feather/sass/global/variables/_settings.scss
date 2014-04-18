@@ -11,6 +11,11 @@ $output-elements: true !default;
 $output-selectors: true !default;
 
 //////////////////////
+// GENERAL
+$small-phi: 100 - 100 / $phi * 1%;
+//////////////////////
+
+//////////////////////
 // Z-INDEXES
 $zi-wall: 100;
 $zi-header: 0;

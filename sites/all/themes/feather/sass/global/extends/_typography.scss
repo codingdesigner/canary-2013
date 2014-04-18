@@ -51,3 +51,7 @@
 %italic {
   font-style: italic;
 }
+
+%measure-to-columns {
+  @include column-width(18em);
+}

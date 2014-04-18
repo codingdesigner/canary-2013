@@ -15,7 +15,7 @@ $blockquote-footer-extend: true !default;
   }
   @else {
     &:last-child {
-      margin-bottom: 0;
+      margin-bottom: $base-line-em / 2;
     }
   }
 }
@@ -35,6 +35,9 @@ $blockquote-footer-extend: true !default;
       content: "“";
       font-size: 3em;
       line-height: 1;
+    }
+    .quote {
+      @extend %measure-to-columns;
     }
   }
 }
