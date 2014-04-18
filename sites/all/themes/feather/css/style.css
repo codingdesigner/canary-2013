@@ -107,7 +107,7 @@ em {
   font-style: italic;
 }
 
-.intro p, blockquote .quote {
+blockquote .quote {
   -moz-column-width: 18em;
   -webkit-column-width: 18em;
   column-width: 18em;
@@ -1743,49 +1743,70 @@ blockquote h1 {
   padding-right: 0.25em;
 }
 
+._client .intro {
+  padding-left: 1.5em;
+}
 @media (min-width: 38.75em) {
   ._client .hero-image {
+    width: 48.64865%;
     float: right;
-    width: calc(50% - 0.5em);
     margin-left: 1em;
+    margin-right: 0;
+    clear: none;
   }
 }
 @media (min-width: 50em) {
-  ._client .intro {
-    float: left;
-    width: calc(50% - 0.5em);
-  }
   ._client .hero-image {
+    width: 48.64865%;
     float: right;
-    width: calc(50% - 0.5em);
-    margin-left: auto;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  ._client .intro {
+    width: 48.64865%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
   }
   ._client .testimonial {
-    clear: both;
-  }
-  ._client .our-work {
     clear: both;
   }
 }
 @media (min-width: 60em) {
   ._client .testimonial {
+    width: 48.64865%;
     float: left;
-    width: calc(50% - 0.5em);
+    margin-right: -100%;
+    margin-left: 0;
     clear: left;
+  }
+  ._client .our-work {
+    clear: both;
   }
 }
 @media (min-width: 76.25em) {
-  ._client .intro {
-    float: left;
-    width: calc(33% - 0.5em);
-  }
   ._client .hero-image {
+    width: 32.14286%;
     float: right;
-    width: calc(33% - 0.5em);
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  ._client .intro {
+    width: 32.14286%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    padding-left: initial;
   }
   ._client .testimonial {
+    width: 32.14286%;
     float: left;
-    width: calc(33% - 0.5em);
+    margin-right: -100%;
+    margin-left: 33.92857%;
     clear: none;
   }
 }
