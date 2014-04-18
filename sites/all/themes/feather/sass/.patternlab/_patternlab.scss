@@ -40,8 +40,13 @@
 }
 
 // MODULAR SCALE
-@for $i from 0 through 10 {
-  .ms-#{$i} {
-    font-size: ms($i);
+.sg-ms {
+  li {
+    white-space: nowrap;
+  }
+  @for $i from 0 through 10 {
+    .ms-#{$i} {
+      font-size: ms($i);
+    }
   }
 }
