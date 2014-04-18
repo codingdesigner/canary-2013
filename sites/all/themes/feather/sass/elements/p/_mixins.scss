@@ -21,5 +21,4 @@ $p-extend:       true !default;
   font-size: em($size);
   line-height: $line-height / ($base-font-size * unitless($size));
   margin-bottom: em($line-height);
-  @extend %measure-to-columns;
 }
