@@ -12,7 +12,9 @@ $output-selectors: true !default;
 
 //////////////////////
 // GENERAL
-$small-phi: 100 - 100 / $phi * 1%;
+$big-phi: 1 / $phi;
+$small-phi: 1 - 1 / $phi;
+$small-phi-percent: 100 - 100 / $phi * 1%;
 //////////////////////
 
 //////////////////////

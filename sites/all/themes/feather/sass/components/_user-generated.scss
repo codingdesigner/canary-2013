@@ -15,7 +15,8 @@
   @extend %body-unpad;
 }
 
-.file-video {
+.media-youtube-video {
   @extend %body-unpad;
   @include ir(640/380, 100%, "iframe");
+  clear: both;
 }
