@@ -143,12 +143,12 @@ body {
   }
 }
 
-.site-header, .fluid-media, .file-video, .file-downloads--client, .media-placements {
+.site-header, .fluid-media, .media-youtube-video, .file-downloads--client, .media-placements {
   margin-left: -0.25em;
   margin-right: -0.25em;
 }
 @media (min-width: 48.75em) {
-  .site-header, .fluid-media, .file-video, .file-downloads--client, .media-placements {
+  .site-header, .fluid-media, .media-youtube-video, .file-downloads--client, .media-placements {
     border-left-width: 0.75em;
     border-right-width: 0.75em;
   }
@@ -1633,13 +1633,14 @@ blockquote h1 {
   }
 }
 
-.file-video {
+.media-youtube-video {
   position: relative;
   height: 0;
   padding-top: 59.375%;
   width: 100%;
+  clear: both;
 }
-.file-video iframe {
+.media-youtube-video iframe {
   display: block;
   position: absolute;
   width: 100% !important;
@@ -1748,7 +1749,7 @@ blockquote h1 {
 }
 @media (min-width: 38.75em) {
   ._client .hero-image {
-    width: 48.64865%;
+    width: 47.61905%;
     float: right;
     margin-left: 1em;
     margin-right: 0;
@@ -1757,14 +1758,14 @@ blockquote h1 {
 }
 @media (min-width: 50em) {
   ._client .hero-image {
-    width: 48.64865%;
+    width: 47.61905%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
   }
   ._client .intro {
-    width: 48.64865%;
+    width: 47.61905%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
@@ -1774,9 +1775,23 @@ blockquote h1 {
     clear: both;
   }
 }
-@media (min-width: 60em) {
+@media (min-width: 59.375em) {
+  ._client .hero-image {
+    width: 36.7275%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  ._client .intro {
+    width: 59.42634%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
   ._client .testimonial {
-    width: 48.64865%;
+    width: 59.42634%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
@@ -1788,14 +1803,14 @@ blockquote h1 {
 }
 @media (min-width: 76.25em) {
   ._client .hero-image {
-    width: 32.14286%;
+    width: 31.25%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
   }
   ._client .intro {
-    width: 32.14286%;
+    width: 31.25%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
@@ -1803,11 +1818,65 @@ blockquote h1 {
     padding-left: initial;
   }
   ._client .testimonial {
-    width: 32.14286%;
+    width: 31.25%;
     float: left;
     margin-right: -100%;
-    margin-left: 33.92857%;
+    margin-left: 34.375%;
     clear: none;
+  }
+}
+@media (min-width: 40em) {
+  ._client .media-placements {
+    clear: both;
+  }
+  ._client .our-work {
+    width: 47.61905%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: both;
+  }
+  ._client .for-the-media {
+    width: 47.61905%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+@media (min-width: 59.375em) {
+  ._client .our-work {
+    width: 59.42634%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: both;
+  }
+  ._client .for-the-media {
+    width: 36.7275%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+@media (min-width: 63.75em) {
+  ._client .content-image {
+    max-width: 38.1966%;
+  }
+  ._client .file-video {
+    width: 38.1966%;
+  }
+  ._client .content-image, ._client .file-video {
+    clear: both;
+  }
+  ._client .content-image:nth-of-type(odd), ._client .file-video:nth-of-type(odd) {
+    float: right;
+    margin-left: 1em;
+  }
+  ._client .content-image:nth-of-type(even), ._client .file-video:nth-of-type(even) {
+    float: left;
+    margin-right: 1em;
   }
 }
 
