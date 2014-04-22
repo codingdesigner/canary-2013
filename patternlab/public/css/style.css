@@ -883,6 +883,12 @@ th {
   }
 }
 
+@media (min-width: 48.75em) {
+  [id="footer"] {
+    -webkit-order: 4;
+    order: 4;
+  }
+}
 [role="navigation"] {
   letter-spacing: 1px;
 }
@@ -1685,14 +1691,14 @@ blockquote h1 {
   clear: both;
 }
 
-._2-even .file-download--image:nth-of-type(odd) {
+.file-downloads--client[data-eq-state="medium"] .file-download--image:nth-of-type(odd) {
   width: 48.64865%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: left;
 }
-._2-even .file-download--image:nth-of-type(even) {
+.file-downloads--client[data-eq-state="medium"] .file-download--image:nth-of-type(even) {
   width: 48.64865%;
   float: right;
   margin-left: 0;
@@ -1860,24 +1866,45 @@ blockquote h1 {
     clear: none;
   }
 }
-@media (min-width: 63.75em) {
-  ._client .content-image {
-    max-width: 38.1966%;
-  }
-  ._client .file-video {
-    width: 38.1966%;
-  }
-  ._client .content-image, ._client .file-video {
-    clear: both;
-  }
-  ._client .content-image:nth-of-type(odd), ._client .file-video:nth-of-type(odd) {
-    float: right;
-    margin-left: 1em;
-  }
-  ._client .content-image:nth-of-type(even), ._client .file-video:nth-of-type(even) {
-    float: left;
-    margin-right: 1em;
-  }
+
+.article--body:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.article--body .grouping {
+  clear: both;
+}
+.article--body[data-eq-state="medium"] .content-image {
+  max-width: 50%;
+}
+.article--body[data-eq-state="medium"] .file-video {
+  width: 50%;
+}
+.article--body[data-eq-state="medium"] .content-image, .article--body[data-eq-state="medium"] .file-video {
+  clear: right;
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1.625em;
+}
+.article--body[data-eq-state="large"] .content-image {
+  max-width: 38.1966%;
+}
+.article--body[data-eq-state="large"] .file-video {
+  width: 38.1966%;
+}
+.article--body[data-eq-state="large"] .content-image, .article--body[data-eq-state="large"] .file-video {
+  margin-bottom: 1.625em;
+}
+.article--body[data-eq-state="large"] .grouping:nth-of-type(odd) .content-image, .article--body[data-eq-state="large"] .grouping:nth-of-type(odd) .file-video {
+  clear: right;
+  float: right;
+  margin-left: 1em;
+}
+.article--body[data-eq-state="large"] .grouping:nth-of-type(even) .content-image, .article--body[data-eq-state="large"] .grouping:nth-of-type(even) .file-video {
+  clear: left;
+  float: left;
+  margin-right: 1em;
 }
 
 .sg-swatch.black {
