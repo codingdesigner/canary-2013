@@ -57,14 +57,17 @@ $file-downloads-gutter: 1/18;
   @include clearfix;
 }
 
-._2-even {
-  .file-download--image {
-    @include layout($file-downloads-grid, $file-downloads-gutter) {
-      &:nth-of-type(odd) {
-        @include grid-span(1, 1, $options: ('clear' : left));
-      }
-      &:nth-of-type(even) {
-        @include grid-span(1, 2);
+
+.file-downloads--client {
+  &[data-eq-state="medium"] {
+    .file-download--image {
+      @include layout($file-downloads-grid, $file-downloads-gutter) {
+        &:nth-of-type(odd) {
+          @include grid-span(1, 1, $options: ('clear' : left));
+        }
+        &:nth-of-type(even) {
+          @include grid-span(1, 2);
+        }
       }
     }
   }
@@ -220,31 +223,50 @@ $golden-2-gutter: 1/25;
       }
     }
   }
-  @include breakpoint(1020px) {
-    // @include layout($golden-2, $golden-2-gutter) {
-    //   .our-work {
-    //     @include grid-span(1, 1, $options: ('clear' : both));
-    //   }
-      .content-image {
-        max-width: $small-phi-percent;
-      }
-      .file-video {
-        width: $small-phi-percent;
-      }
+}
+
+.article--body {
+  @include clearfix;
+  .grouping {
+    clear: both;
+  }
+  &[data-eq-state="medium"] {
+    .content-image {
+      max-width: 50%;
+    }
+    .file-video {
+      width: 50%;
+    }
+    .content-image, .file-video {
+      clear: right;
+      float: right;
+      margin-left: 1em;
+      margin-bottom: $base-line-em;
+    }
+  }
+  &[data-eq-state="large"] {
+    .content-image {
+      max-width: $small-phi-percent;
+    }
+    .file-video {
+      width: $small-phi-percent;
+    }
+    .content-image, .file-video {
+      margin-bottom: $base-line-em;
+    }
+    .grouping:nth-of-type(odd) {
       .content-image, .file-video {
-        clear: both;
-        &:nth-of-type(odd) {
-          float: right;
-          margin-left: 1em;
-        }
-        &:nth-of-type(even) {
-          float: left;
-          margin-right: 1em;
-        }
+        clear: right;
+        float: right;
+        margin-left: 1em;
       }
-    //   .for-the-media {
-    //     @include grid-span(1, 2);
-    //   }
-    // }
+    }
+    .grouping:nth-of-type(even) {
+      .content-image, .file-video {
+        clear: left;
+        float: left;
+        margin-right: 1em;
+      }
+    }
   }
 }

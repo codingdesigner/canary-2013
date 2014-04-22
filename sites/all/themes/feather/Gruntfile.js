@@ -125,6 +125,12 @@ module.exports = function (grunt) {
           },
           {
             expand: true,
+            src: 'javascripts/*',
+            dest: '../../../../patternlab/source/',
+            filter: 'isFile'
+          },
+          {
+            expand: true,
             src: 'images/**',
             dest: '../../../../patternlab/source/',
             filter: 'isFile'

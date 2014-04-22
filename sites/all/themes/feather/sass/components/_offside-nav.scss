@@ -104,6 +104,9 @@ $bp-nav-wide: 780px;
     @include order(2);
     @include nav-wide-visual;
   }
+  [id="footer"] {
+    @include order(4);
+  }
 }
 
 // universal styles
