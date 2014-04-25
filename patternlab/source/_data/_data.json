@@ -31,6 +31,26 @@
 			"alt": "Rectangle"
 		}
 	},
+	"icons" : {
+    "bubble": "../../images/icons/bubble.svg",
+    "facebook": "../../images/icons/facebook.svg",
+    "flickr": "../../images/icons/flickr.svg",
+    "github": "../../images/icons/github.svg",
+    "googleplus": "../../images/icons/googleplus.svg",
+    "hambuger-menu": "../../images/icons/hambuger-menu.svg",
+    "instagram": "../../images/icons/instagram.svg",
+    "linkedin": "../../images/icons/linkedin.svg",
+    "mail": "../../images/icons/mail.svg",
+    "menu": "../../images/icons/menu.svg",
+    "next": "../../images/icons/next.svg",
+    "pinterest": "../../images/icons/pinterest.svg",
+    "play": "../../images/icons/play.svg",
+    "previous": "../../images/icons/previous.svg",
+    "rdio": "../../images/icons/rdio.svg",
+    "rss": "../../images/icons/rss.svg",
+    "search": "../../images/icons/search.svg",
+    "twitter": "../../images/icons/twitter.svg"
+	},
 	"client" : {
 		"one" : "FringeArts",
 		"two" : "Knight Foundation"
