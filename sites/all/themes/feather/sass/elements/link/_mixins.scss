@@ -38,18 +38,19 @@ $unset-border-links-extend: true;
   }
   @else {
     text-decoration: none;
-    border-bottom: $link-border-size $link-border-style $link-border-normal;
+    @include text-shadow($cs-background -1px 1px 0, $cs-background 0 1px 0, $cs-background 1px 1px 0);
+    @include background-image(linear-gradient(to top, $link-border-normal $link-border-size, $cs-background ($link-border-size + 1)));
     &:visited {
-      border-bottom-color: $link-border-visited;
+      @include background-image(linear-gradient(to top, $link-border-visited $link-border-size, $cs-background ($link-border-size + 1)));
     }
     &:focus {
-      border-bottom-color: $link-border-focus;
+      @include background-image(linear-gradient(to top, $link-border-focus $link-border-size, $cs-background ($link-border-size + 1)));
     }
     &:hover {
-      border-bottom-color: $link-border-hover;
+      @include background-image(linear-gradient(to top, $link-border-hover $link-border-size, $cs-background ($link-border-size + 1)));
     }
     &:active {
-      border-bottom-color: $link-border-active;
+      @include background-image(linear-gradient(to top, $link-border-active $link-border-size, $cs-background ($link-border-size + 1)));
     }
   }
 }
@@ -60,18 +61,23 @@ $unset-border-links-extend: true;
   }
   @else {
     text-decoration: none;
-    border-bottom: none;
+    @include text-shadow(none);
+    @include background-image(none);
     &:visited {
-      border-bottom: none;
+      @include text-shadow(none);
+      @include background-image(none);
     }
     &:focus {
-      border-bottom: none;
+      @include text-shadow(none);
+      @include background-image(none);
     }
     &:hover {
-      border-bottom: none;
+      @include text-shadow(none);
+      @include background-image(none);
     }
     &:active {
-      border-bottom: none;
+      @include text-shadow(none);
+      @include background-image(none);
     }
   }
 }
