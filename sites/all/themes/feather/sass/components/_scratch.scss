@@ -43,11 +43,11 @@
     + .press-title-link {
       // display: inline-block;
       margin-left: 2.5em;
-      a {
-        @include background-image(linear-gradient(to top, $blue-very-light 1px, $cs-background 2px));
-        border: none;
-        @include text-shadow($cs-background -1px 1px 0, $cs-background 0 1px 0, $cs-background 1px 1px 0);
-      }
+      // a {
+      //   @include background-image(linear-gradient(to top, $blue-very-light 1px, $cs-background 2px));
+      //   border: none;
+      //   @include text-shadow($cs-background -1px 1px 0, $cs-background 0 1px 0, $cs-background 1px 1px 0);
+      // }
     }
   }
 }
@@ -111,7 +111,7 @@ $file-downloads-gutter: 1/18;
 }
 
 .linked-image {
-  @extend %link-unset-borders-extend;
+  @extend %link-unset-background-extend;
 }
 
 .media-placements {

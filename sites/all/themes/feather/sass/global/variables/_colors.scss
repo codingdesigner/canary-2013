@@ -24,6 +24,7 @@ $cool-white-shade   : shade($cool-white, 2%);
 $orange-dark        : adjust-color($orange, $lightness: -10%);
 $orange-darker      : adjust-color($orange, $lightness: -15%);
 $orange-light       : tint($orange, 55%);
+$blue-light         : adjust-color($blue, $hue: 0.69054deg, $saturation: -38.87421%, $lightness: 40%);
 $blue-very-light    : adjust-color($blue, $hue: 0.69054deg, $saturation: -38.87421%, $lightness: 57.05882%);
 $blue-dark          : adjust-color($blue, $lightness: -10%);
 $gray-trans         : rgba($gray-light, 0.3);
@@ -68,11 +69,11 @@ $cs-link-hover: $orange;
 $cs-link-active: $orange;
 $cs-link-visited: $blue;
 $cs-link-focus: $orange;
-$cs-link-border-normal: $blue;
-$cs-link-border-hover: $orange;
-$cs-link-border-active: $orange;
-$cs-link-border-visited: $blue;
-$cs-link-border-focus: $orange;
+$cs-link-background-normal: $blue-light;
+$cs-link-background-hover: $blue;
+$cs-link-background-active: $blue;
+$cs-link-background-visited: $blue-light;
+$cs-link-background-focus: $blue;
 
 //////////////////////////////
 // Background Colors

@@ -45,10 +45,10 @@
 .site-header-wrapper {
   position: relative;
   @include breakpoint($bp-nav) {
-    -webkit-transform: translateX(0.5em);
+    @include transform( translateX(0.5em) );
   }
   @include breakpoint($bp-big-logo) {
-    -webkit-transform: none;
+    @include transform(none);
     background-color: $white;
     max-width: 32em;
     margin: 0 auto;
@@ -69,6 +69,7 @@
 .logo-site-name {
   float: none;
   border-bottom: none;
+  @include unset-background-links($extend: false);
   @include breakpoint($bp-nav) {
     float: left;
   }
@@ -84,7 +85,7 @@
   top: 0;
   left: 0;
   z-index: 0;
-  -webkit-transform: translateY(-84px) translateX(-8px);
+  @include transform( translateY(-84px) translateX(-8px) );
   svg {
     max-width: 100%;
   }
@@ -126,7 +127,7 @@
   font-weight: 500;
   font-size: em(28px, $base-font-size);
   white-space: nowrap;
-  -webkit-transform: translateX(6px);
+  @include transform( translateX(6px) );
   @include breakpoint($hidpi) {
     font-weight: 600;
   }
@@ -152,7 +153,7 @@
   margin-bottom: 0;
   max-width: em(260px, 14px);
   color: $blue-dark;
-  -webkit-transform: translateX(6px);
+  @include transform( translateX(6px) );
   &:after {
     content: $space;
     width: 100%;
@@ -177,12 +178,12 @@
     width: 32em;
     max-width: 32em;
     font-weight: 600;
-    -webkit-transform: translateY(7px);
+    @include transform( translateY(12px) );
     &:after {
       display: none;
     }
     @include breakpoint($hidpi) {
-      -webkit-transform: translateY(6px);
+        @include transform( translateY(6px) );
     }
   }
   @include breakpoint($bp-big-logo) {
@@ -195,7 +196,7 @@
     line-height: $base-line-height;
     position: static;
     float: none;
-    -webkit-transform: none;
+    @include transform(none);
     &:after {
       display: none;
     }

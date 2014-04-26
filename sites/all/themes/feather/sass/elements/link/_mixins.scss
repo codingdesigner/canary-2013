@@ -10,15 +10,14 @@ $link-hover-default: $cs-link-hover !default;
 $link-active-default: $cs-link-active !default;
 $link-visited-default: $cs-link-visited !default;
 $link-focus-default: $cs-link-focus !default;
-$set-border-links-default: true !default;
-$link-border-size-default: 1px !default;
-$link-border-style-default: solid !default;
-$link-border-normal-default: $cs-link-border-normal !default;
-$link-border-hover-default: $cs-link-border-hover !default;
-$link-border-active-default: $cs-link-border-active !default;
-$link-border-visited-default: $cs-link-border-visited !default;
-$link-border-focus-default: $cs-link-border-focus !default;
-$unset-border-links-extend: true;
+$set-background-links-default: true !default;
+$link-background-size-default: 1px !default;
+$link-background-normal-default: $cs-link-background-normal !default;
+$link-background-hover-default: $cs-link-background-hover !default;
+$link-background-active-default: $cs-link-background-active !default;
+$link-background-visited-default: $cs-link-background-visited !default;
+$link-background-focus-default: $cs-link-background-focus !default;
+$unset-background-links-extend: true;
 //////////////////////////////
 
 @mixin set-link-colors($link-normal: $link-normal-default, $link-hover: $link-hover-default, $link-active: $link-active-default, $link-visited: $link-visited-default, $link-focus: $link-focus-default, $extend: $links-extend) {
@@ -32,32 +31,32 @@ $unset-border-links-extend: true;
   }
 }
 
-@mixin set-border-links($link-border-normal: $link-border-normal-default, $link-border-hover: $link-border-hover-default, $link-border-active: $link-border-active-default, $link-border-visited: $link-border-visited-default, $link-border-focus: $link-border-focus-default, $link-border-size: $link-border-size-default, $link-border-style: $link-border-style-default, $extend: $set-border-links-default) {
+@mixin set-background-links($link-background-normal: $link-background-normal-default, $link-background-hover: $link-background-hover-default, $link-background-active: $link-background-active-default, $link-background-visited: $link-background-visited-default, $link-background-focus: $link-background-focus-default, $link-background-size: $link-background-size-default, $extend: $set-background-links-default) {
   @if $extend {
-    @extend %link-borders-extend;
+    @extend %link-background-extend;
   }
   @else {
     text-decoration: none;
     @include text-shadow($cs-background -1px 1px 0, $cs-background 0 1px 0, $cs-background 1px 1px 0);
-    @include background-image(linear-gradient(to top, $link-border-normal $link-border-size, $cs-background ($link-border-size + 1)));
+    @include background-image(linear-gradient(to top, $link-background-normal $link-background-size, $cs-background ($link-background-size + 1)));
     &:visited {
-      @include background-image(linear-gradient(to top, $link-border-visited $link-border-size, $cs-background ($link-border-size + 1)));
+      @include background-image(linear-gradient(to top, $link-background-visited $link-background-size, $cs-background ($link-background-size + 1)));
     }
     &:focus {
-      @include background-image(linear-gradient(to top, $link-border-focus $link-border-size, $cs-background ($link-border-size + 1)));
+      @include background-image(linear-gradient(to top, $link-background-focus $link-background-size, $cs-background ($link-background-size + 1)));
     }
     &:hover {
-      @include background-image(linear-gradient(to top, $link-border-hover $link-border-size, $cs-background ($link-border-size + 1)));
+      @include background-image(linear-gradient(to top, $link-background-hover $link-background-size, $cs-background ($link-background-size + 1)));
     }
     &:active {
-      @include background-image(linear-gradient(to top, $link-border-active $link-border-size, $cs-background ($link-border-size + 1)));
+      @include background-image(linear-gradient(to top, $link-background-active $link-background-size, $cs-background ($link-background-size + 1)));
     }
   }
 }
 
-@mixin unset-border-links($extend: $unset-border-links-extend) {
+@mixin unset-background-links($extend: $unset-background-links-extend) {
   @if $extend {
-    @extend %link-unset-borders-extend;
+    @extend %link-unset-background-extend;
   }
   @else {
     text-decoration: none;

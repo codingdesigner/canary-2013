@@ -6,28 +6,28 @@
   @include set-link-colors($extend: false);
 }
 
-%link-borders-extend {
-  @include set-border-links($extend: false);
+%link-background-extend {
+  @include set-background-links($extend: false);
 }
 
-%link-unset-borders-extend {
-  @include unset-border-links(false);
+%link-unset-background-extend {
+  @include unset-background-links(false);
 }
 
 %links-extend {
   @extend %link-colors-extend;
-  @extend %link-borders-extend;
+  @extend %link-background-extend;
 }
 
 %nav-links {
   @include set-link-colors($blue-slate, $orange, $orange, $blue-slate, $blue-slate, $extend: false);
 }
 
-%links-white {
-  padding: 0 0.5em;
-  border-bottom: 1px solid rgba(tint($blue-slate, 20%), 0.5);
-  @include set-link-colors($cool-white, $white, $white, $cool-white, $cool-white, $extend: false);
-}
+// %links-white {
+//   padding: 0 0.5em;
+//   border-bottom: 1px solid rgba(tint($blue-slate, 20%), 0.5);
+//   @include set-link-colors($cool-white, $white, $white, $cool-white, $cool-white, $extend: false);
+// }
 
 %links-dark-blue {
   @include set-link-colors($blue-dark, $white, $white, $blue-dark, $blue-dark, $extend: false);

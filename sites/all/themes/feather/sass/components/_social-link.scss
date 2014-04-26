@@ -40,7 +40,7 @@ $output-selectors--social-link: true !default;
       }
     }
     a {
-      @extend %link-unset-borders-extend;
+      @extend %link-unset-background-extend;
     }
   }
 // {social-link}@

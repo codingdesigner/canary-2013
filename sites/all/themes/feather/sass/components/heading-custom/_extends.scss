@@ -86,13 +86,13 @@
   }
   &:before {
     right: calc(100% - 1.5em);
-    -webkit-transform-origin: 0 100%;
-    -webkit-transform: skewX(45deg);
+    @include transform-origin( 0 100%);
+    @include transform( skewX(45deg) );
   }
   &:after {
     left: 1.5em;
-    -webkit-transform-origin: 0 100%;
-    -webkit-transform: skewX(-45deg);
+    @include transform-origin( 0 100%);
+    @include transform( skewX(-45deg) );
   }
 }
 

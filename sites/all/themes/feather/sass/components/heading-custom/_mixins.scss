@@ -48,7 +48,7 @@ $field-section-title-extend: true !default;
   }
   @else {
     @include link-colors($white, $white, $white, $white, $white);
-    @include unset-border-links();
+    @include unset-background-links();
     &:hover {
       text-shadow: $blue 2px 2px 0;
     }
@@ -94,9 +94,8 @@ $field-section-title-extend: true !default;
     margin-left: em(-4px, nth($heading-sizes, 1));
     margin-right: em(-4px, nth($heading-sizes, 1));
     min-width: 50%;
-    -webkit-filter: drop-shadow($white 0 4px 0);
-    filter: drop-shadow($white 0 4px 0);
-    -webkit-transform: translateZ(0); // fix webkit bug -- blurs when css filter is applied
+    @include filter( drop-shadow($white 0 4px 0) );
+    @include transform( translateZ(0) ); // fix webkit bug -- blurs when css filter is applied
     @include breakpoint($bp-small-type) {
       margin-left: em(-4px, nth($heading-sizes-small, 1));
       margin-right: em(-4px, nth($heading-sizes-small, 1));
