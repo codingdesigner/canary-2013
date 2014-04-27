@@ -1,1 +1,3 @@
-<img src="{{ img.logo.src }}" alt="{{ img.logo.alt }}" class="placement-logo" />
+{{#img.logos}}
+  <img src="{{ logo.src }}" alt="{{ logo.alt }}" class="placement-logo" />
+{{/img.logos}}

@@ -16,6 +16,32 @@
 			"src": "../../images/logo.png",
 			"alt": "Logo Image"
 		},
+		"logos" : [
+			{
+				"logo": {
+					"src": "../../images/The_New_York_Times.svg",
+					"alt": "New York Times"
+				}
+			},
+			{
+				"logo": {
+					"src": "../../images/The-Philadelphia-Inquirer-Logo.svg",
+					"alt": "Philadelphia Inquirer"
+				}
+			},
+			{
+				"logo": {
+					"src": "../../images/americantheatre.jpg",
+					"alt": "American Theater"
+				}
+			},
+			{
+				"logo": {
+					"src": "../../images/art-in-america.png",
+					"alt": "Art in America"
+				}
+			}
+		],
 		"square": {
 			"src": "../../images/fm_square.png",
 			"alt": "Square Thumbnail",
@@ -130,9 +156,12 @@
 		{ }
 	],
 	"brand_colors" : [
+		{"label": "orange-light"},
+		{"label": "orange-less-light"},
 		{"label": "orange"},
 		{"label": "orange-dark"},
 		{"label": "orange-darker"},
+		{"label": "orange-darkerer"},
 		{"label": "orange-chocolate"},
 		{"label": "blue-very-light"},
 		{"label": "blue-light"},

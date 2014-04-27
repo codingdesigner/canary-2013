@@ -1,13 +1,12 @@
-<section class="media-placements _2-even">
+<section class="media-placements">
   <h1 class="section-title">Media Placements</h1>
   <ul>
-    <li class="placement">
-      <a href="{{ url }}" class="linked-image">{{> atoms-external-logo }}</a>
-      <a href="{{ url }}"><div class="name">{{ media.one }}</div></a>
-    </li>
-    <li class="placement">
-      <a href="{{ url }}" class="linked-image">{{> atoms-external-logo }}</a>
-      <a href="{{ url }}"><div class="name">{{ media.two }}</div></a>
-    </li>
+    {{#img.logos}}
+      <li class="placement">
+        <a href="{{ url }}" class="linked-image">
+          <img src="{{ logo.src }}" alt="{{ logo.alt }}" class="placement-logo" />
+        </a>
+      </li>
+    {{/img.logos}}
   </ul>
 </section>
