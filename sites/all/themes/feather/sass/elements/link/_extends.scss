@@ -31,5 +31,9 @@
 
 %links-dark-blue {
   @include set-link-colors($blue-dark, $white, $white, $blue-dark, $blue-dark, $extend: false);
-  // @include link-colors($blue-dark, $white, $white, $blue-dark, $blue-dark);
+}
+
+%links-on-orange {
+  @include set-link-colors($orange-darkerer, $white, $white, $orange-darkerer, $orange-darkerer, $extend: false);
+  @include set-background-links($orange-less-light, $blue-very-light, $blue-very-light, $orange-less-light, $blue-very-light, $bkg: $orange, $extend: false);
 }

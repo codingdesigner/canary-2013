@@ -17,6 +17,7 @@ $link-background-hover-default: $cs-link-background-hover !default;
 $link-background-active-default: $cs-link-background-active !default;
 $link-background-visited-default: $cs-link-background-visited !default;
 $link-background-focus-default: $cs-link-background-focus !default;
+$link-background-bkg-default: $cs-link-background-bkg !default;
 $unset-background-links-extend: true;
 //////////////////////////////
 
@@ -31,25 +32,25 @@ $unset-background-links-extend: true;
   }
 }
 
-@mixin set-background-links($link-background-normal: $link-background-normal-default, $link-background-hover: $link-background-hover-default, $link-background-active: $link-background-active-default, $link-background-visited: $link-background-visited-default, $link-background-focus: $link-background-focus-default, $link-background-size: $link-background-size-default, $extend: $set-background-links-default) {
+@mixin set-background-links($link-background-normal: $link-background-normal-default, $link-background-hover: $link-background-hover-default, $link-background-active: $link-background-active-default, $link-background-visited: $link-background-visited-default, $link-background-focus: $link-background-focus-default, $link-background-size: $link-background-size-default, $bkg: $link-background-bkg-default, $extend: $set-background-links-default) {
   @if $extend {
     @extend %link-background-extend;
   }
   @else {
     text-decoration: none;
-    @include text-shadow($cs-background -1px 1px 0, $cs-background 0 1px 0, $cs-background 1px 1px 0);
-    @include background-image(linear-gradient(to top, $link-background-normal $link-background-size, $cs-background ($link-background-size + 1)));
+    @include text-shadow($bkg -1px 1px 0, $bkg 0 1px 0, $bkg 1px 1px 0);
+    @include background-image(linear-gradient(to top, $link-background-normal $link-background-size, $bkg ($link-background-size + 1)));
     &:visited {
-      @include background-image(linear-gradient(to top, $link-background-visited $link-background-size, $cs-background ($link-background-size + 1)));
+      @include background-image(linear-gradient(to top, $link-background-visited $link-background-size, $bkg ($link-background-size + 1)));
     }
     &:focus {
-      @include background-image(linear-gradient(to top, $link-background-focus $link-background-size, $cs-background ($link-background-size + 1)));
+      @include background-image(linear-gradient(to top, $link-background-focus $link-background-size, $bkg ($link-background-size + 1)));
     }
     &:hover {
-      @include background-image(linear-gradient(to top, $link-background-hover $link-background-size, $cs-background ($link-background-size + 1)));
+      @include background-image(linear-gradient(to top, $link-background-hover $link-background-size, $bkg ($link-background-size + 1)));
     }
     &:active {
-      @include background-image(linear-gradient(to top, $link-background-active $link-background-size, $cs-background ($link-background-size + 1)));
+      @include background-image(linear-gradient(to top, $link-background-active $link-background-size, $bkg ($link-background-size + 1)));
     }
   }
 }

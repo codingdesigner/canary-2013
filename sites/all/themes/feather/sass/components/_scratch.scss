@@ -122,26 +122,44 @@ $file-downloads-gutter: 1/18;
   }
 }
 
-._2-even {
-  .placement {
-    @include layout($file-downloads-grid, $file-downloads-gutter) {
-      &:nth-of-type(odd) {
-        @include grid-span(1, 1, $options: ('clear' : left));
-      }
-      &:nth-of-type(even) {
-        @include grid-span(1, 2);
-      }
-    }
+.media-placements {
+  background-color: $white;
+}
+.placement {
+  float: left;
+  width: em(300px);
+  height: 5em;
+  margin : {
+    top: 1em;
+    right: 2em;
+    bottom: $base-line-em;
+  }
+  padding: 0.5em;
+  background-color: white;
+  border-bottom: 1px solid orange;
+  position: relative;
+  @extend %relative;
+  &:before {
+    @extend %absolute;
+    @include triangle($orange, 0.5em, 1em, bottom);
+    bottom: -0.5em;
+    left: 1em;
+    content: $space;
+  }
+  &:after {
+    @extend %absolute;
+    @include triangle($cs-background, 0.5em, 1em, bottom);
+    bottom: calc(-0.5em + 1px);
+    left: 1em;
+    content: $space;
   }
 }
 
-.placement {
-  margin-bottom: $base-line-em;
-  .name {
-    @extend %headings-extend;
-    padding-left: 0.25em;
-    padding-right: 0.25em;
-  }
+.placement-logo {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 0.25em;
+  max-width: 282px;
 }
 
 
@@ -285,6 +303,27 @@ $golden-2-gutter: 1/25;
         clear: left;
         float: left;
         margin-right: 1em;
+      }
+    }
+  }
+}
+
+.our-work {
+  .asides {
+    @include clearfix();
+    &[data-eq-state="medium"] {
+      [class*="--EMBEDDED-BLOCK"] {
+        @include layout($work-media-grid-2, $work-media-gutter) {
+          &:nth-of-type(2n+1) {
+            @include grid-span(1, 1, $options: ('clear' : both));
+          }
+          &:nth-of-type(2n+2) {
+            @include grid-span(1, 2);
+          }
+          &:nth-of-type(odd):last-of-type {
+            @include grid-span(2, 1, $options: ('clear' : both));
+          }
+        }
       }
     }
   }
