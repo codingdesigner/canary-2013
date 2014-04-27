@@ -1,17 +1,28 @@
 // COLORS
 $black              : #1f1f1f;
 $white              : #fefefe;
-
 $orange             : #f08c49;
-$blue               : #13769D;
-$green              : #A9CA98;
-
 $gray               : mix($black, $white);
-
 $cs-primary         : $orange;
 
 //////////////////////////////
 // derived colors
+// $NEW              : #A9CA98;
+// @debug hue($NEW);
+// @debug "h: " hue($NEW) - hue($cs-primary);
+// @debug "---";
+// @debug saturation($NEW);
+// @debug "s: " saturation($NEW) - saturation($cs-primary);
+// @debug "---";
+// @debug lightness($NEW);
+// @debug "l: " lightness($NEW) - lightness($cs-primary);
+// @debug "---";
+// $NEW        : adjust-color($cs-primary, $hue: 75.52814deg, $saturation: -52.72029%, $lightness: 8.03922%);
+// @debug hue($green);
+// @debug saturation($NEW);
+// @debug lightness($NEW);
+$blue        : adjust-color($cs-primary, $hue: 172.88467deg, $saturation: -6.36248%, $lightness: -26.86275%);
+$green        : adjust-color($cs-primary, $hue: 75.52814deg, $saturation: -52.72029%, $lightness: 8.03922%);
 $orange-light       : tint($orange, 55%);
 $orange-less-light  : adjust-color($orange, $hue: -0.52755deg, $saturation: -12.29451%, $lightness: 17.2549%);;
 // $orange
