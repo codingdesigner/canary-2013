@@ -18,7 +18,7 @@
         e.preventDefault();
         showMenu();
       });
-      $("#clear-pane").live('click', function(e){
+      $("#clear-pane").on('click', function(e){
         $('.menu-trigger').click();
       });
 

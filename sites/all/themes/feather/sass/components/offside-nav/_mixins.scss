@@ -77,6 +77,7 @@
   }
   a {
     @include set-link-colors($cool-white, $white, $white, $cool-white, $cool-white, $extend: false);
+    @include unset-background-links($extend: false);
     padding: 0 0.5em;
     border-bottom: 2px solid $cool-white;
   }

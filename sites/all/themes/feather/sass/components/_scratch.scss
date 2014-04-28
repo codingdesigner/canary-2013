@@ -74,6 +74,12 @@ $file-downloads-gutter: 1/18;
 .file-downloads--client {
   @extend %body-unpad;
   @include clearfix;
+  .section-title {
+    margin: {
+      left: 0;
+      right: 0;
+    }
+  }
 }
 
 
@@ -124,6 +130,12 @@ $file-downloads-gutter: 1/18;
 
 .media-placements {
   background-color: $white;
+  .section-title {
+    margin: {
+      left: 0;
+      right: 0;
+    }
+  }
 }
 .placement {
   float: left;
