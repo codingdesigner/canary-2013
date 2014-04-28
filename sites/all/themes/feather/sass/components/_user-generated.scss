@@ -13,6 +13,9 @@
 
 .fluid-media {
   @extend %body-unpad;
+  img {
+    box-shadow: $cool-white-shade 0 0 0 5px;
+  }
 }
 
 .media-youtube-video {
