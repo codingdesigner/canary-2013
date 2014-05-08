@@ -162,7 +162,7 @@ p {
   margin-bottom: 1.625em;
 }
 
-.intro p {
+.field-intro p {
   font-size: 1.16016em;
   line-height: 1.75084;
   margin-bottom: 2.03125em;
@@ -1693,11 +1693,11 @@ blockquote h1 {
   }
 }
 
-.hero-image {
+.field-hero-image {
   margin-left: -0.25em;
   margin-right: -0.25em;
 }
-.hero-image img {
+.field-hero-image img {
   box-shadow: #f5f6f7 0 0 0 5px;
 }
 
@@ -1893,11 +1893,11 @@ blockquote h1 {
   max-width: 282px;
 }
 
-._client .intro {
+._client .field-intro {
   padding-left: 1.5em;
 }
 @media (min-width: 38.75em) {
-  ._client .hero-image {
+  ._client .field-hero-image {
     width: 47.61905%;
     float: right;
     margin-left: 1em;
@@ -1906,14 +1906,14 @@ blockquote h1 {
   }
 }
 @media (min-width: 50em) {
-  ._client .hero-image {
+  ._client .field-hero-image {
     width: 47.61905%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
   }
-  ._client .intro {
+  ._client .field-intro {
     width: 47.61905%;
     float: left;
     margin-right: -100%;
@@ -1925,14 +1925,14 @@ blockquote h1 {
   }
 }
 @media (min-width: 59.375em) {
-  ._client .hero-image {
+  ._client .field-hero-image {
     width: 36.7275%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
   }
-  ._client .intro {
+  ._client .field-intro {
     width: 59.42634%;
     float: left;
     margin-right: -100%;
@@ -1951,14 +1951,14 @@ blockquote h1 {
   }
 }
 @media (min-width: 76.25em) {
-  ._client .hero-image {
+  ._client .field-hero-image {
     width: 31.25%;
     float: right;
     margin-left: 0;
     margin-right: 0;
     clear: none;
   }
-  ._client .intro {
+  ._client .field-intro {
     width: 31.25%;
     float: left;
     margin-right: -100%;
