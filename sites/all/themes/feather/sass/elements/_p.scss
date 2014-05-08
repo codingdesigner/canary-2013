@@ -13,7 +13,7 @@
 
 p {
   @extend %p-base;
-  .intro & {
+  .field-intro & {
     @extend %p-intro;
   }
 }

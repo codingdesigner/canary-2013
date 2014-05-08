@@ -97,6 +97,8 @@ function feather_preprocess_page(&$vars) {
  */
 function feather_preprocess_node(&$vars, $hook) {
   $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
+  $vars['classes_array'][] = $vars['type'];
+  $vars['classes_array'][] = "_" . $vars['type'];
 }
 
 /**
