@@ -1,6 +1,6 @@
 (function ($) {
-  // Drupal.behaviors.offsideNav = {
-  //   attach: function (context, settings) {
+  Drupal.behaviors.offsideNav = {
+    attach: function (context, settings) {
       // VARS
       var nav_offside_active = false;
       $('body')
@@ -18,10 +18,10 @@
         e.preventDefault();
         showMenu();
       });
-      $("#clear-pane").live('click', function(e){
+      $("#clear-pane").on('click', function(e){
         $('.menu-trigger').click();
       });
 
-  //   }
-  // };
+    }
+  };
 })(jQuery);
