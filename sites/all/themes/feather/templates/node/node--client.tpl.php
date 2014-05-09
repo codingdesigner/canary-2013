@@ -104,6 +104,7 @@
   </div>
   <section class="our-work">
     <h1 class="section-title">Our Work</h1>
+    <?php print render($content['body']); ?>
     {{> molecules-body-with-media }}
     <div class="asides" data-eq-pts="medium: 450">
       {{> molecules-case-study-link }}

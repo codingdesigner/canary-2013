@@ -114,6 +114,31 @@ function feather_preprocess_field(&$vars, $hook) {
     $node = reset($vars['items'][0]['node']);
     $vars['theme_hook_suggestions'][] = 'field__' .  $vars['element']['#field_name'] . '__' . $node['#view_mode'];
   }
+  /* Set shortcut variables. Hooray for less typing! */
+  /* reference: http://atendesigngroup.com/blog/adding-css-classes-fields-drupal */
+  $name = $vars['element']['#field_name'];
+  $bundle = $vars['element']['#bundle'];
+  $mode = $vars['element']['#view_mode'];
+
+  // /* Uncomment the lines below to see variables you can use to target a field */
+  // print '<strong>Name:</strong> ' . $name . '<br/>';
+  // print '<strong>Bundle:</strong> ' . $bundle  . '<br/>';
+  // print '<strong>Mode:</strong> ' . $mode .'<br/>';
+
+  /* Add specific classes to targeted fields */
+  switch ($bundle) {
+    case 'client' :
+      switch ($name) {
+        case 'body' :
+          switch ($mode) {
+            case 'full' :
+              $vars['attributes_array']['data-eq-pts'] = 'medium: 580, large: 750';
+              break;
+          }
+          break;
+      }
+      break;
+  }
 }
 
 /**

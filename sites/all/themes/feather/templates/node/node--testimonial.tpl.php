@@ -77,7 +77,6 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
-dpm(get_defined_vars());
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <blockquote>
