@@ -143,12 +143,12 @@ body {
   }
 }
 
-.site-header, #footer, .fluid-media, .media-youtube-video, .file-downloads--client, .media-placements {
+.site-header, #footer, .user-generated .field-image, .media-youtube-video, .file-downloads--client, .media-placements {
   margin-left: -0.25em;
   margin-right: -0.25em;
 }
 @media (min-width: 48.75em) {
-  .site-header, #footer, .fluid-media, .media-youtube-video, .file-downloads--client, .media-placements {
+  .site-header, #footer, .user-generated .field-image, .media-youtube-video, .file-downloads--client, .media-placements {
     border-left-width: 0.75em;
     border-right-width: 0.75em;
   }
@@ -1733,7 +1733,7 @@ blockquote h1 {
   }
 }
 
-.fluid-media img {
+.user-generated .field-image img {
   box-shadow: #f5f6f7 0 0 0 5px;
 }
 
@@ -2015,36 +2015,36 @@ blockquote h1 {
   display: table;
   clear: both;
 }
-.article--body .grouping {
+.article--body .field-image-plus {
   clear: both;
 }
-.article--body[data-eq-state="medium"] .content-image {
+.article--body[data-eq-state="medium"] .field-image {
   max-width: 50%;
 }
 .article--body[data-eq-state="medium"] .file-video {
   width: 50%;
 }
-.article--body[data-eq-state="medium"] .content-image, .article--body[data-eq-state="medium"] .file-video {
+.article--body[data-eq-state="medium"] .field-image, .article--body[data-eq-state="medium"] .file-video {
   clear: right;
   float: right;
   margin-left: 1em;
   margin-bottom: 1.625em;
 }
-.article--body[data-eq-state="large"] .content-image {
+.article--body[data-eq-state="large"] .field-image {
   max-width: 38.1966%;
 }
 .article--body[data-eq-state="large"] .file-video {
   width: 38.1966%;
 }
-.article--body[data-eq-state="large"] .content-image, .article--body[data-eq-state="large"] .file-video {
+.article--body[data-eq-state="large"] .field-image, .article--body[data-eq-state="large"] .file-video {
   margin-bottom: 1.625em;
 }
-.article--body[data-eq-state="large"] .grouping:nth-of-type(odd) .content-image, .article--body[data-eq-state="large"] .grouping:nth-of-type(odd) .file-video {
+.article--body[data-eq-state="large"] .field-image-plus:nth-of-type(odd) .field-image, .article--body[data-eq-state="large"] .field-image-plus:nth-of-type(odd) .file-video {
   clear: right;
   float: right;
   margin-left: 1em;
 }
-.article--body[data-eq-state="large"] .grouping:nth-of-type(even) .content-image, .article--body[data-eq-state="large"] .grouping:nth-of-type(even) .file-video {
+.article--body[data-eq-state="large"] .field-image-plus:nth-of-type(even) .field-image, .article--body[data-eq-state="large"] .field-image-plus:nth-of-type(even) .file-video {
   clear: left;
   float: left;
   margin-right: 1em;
