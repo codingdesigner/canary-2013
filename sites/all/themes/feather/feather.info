@@ -32,6 +32,7 @@ stylesheets[all][] = 'css/style.css'
 ; Scripts
 ; scripts[] = '../../libraries/jRespond/js/jRespond.min.js'
 ; scripts[] = '../../libraries/jPanelMenu/jquery.jpanelmenu.min.js'
+scripts[] = 'javascripts/eq.min.js'
 scripts[] = 'javascripts/nav.js'
 scripts[] = 'javascripts/main.js'
 ; ========================================

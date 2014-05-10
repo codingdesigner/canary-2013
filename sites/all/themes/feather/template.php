@@ -126,19 +126,19 @@ function feather_preprocess_field(&$vars, $hook) {
   // print '<strong>Mode:</strong> ' . $mode .'<br/>';
 
   /* Add specific classes to targeted fields */
-  switch ($bundle) {
-    case 'client' :
-      switch ($name) {
-        case 'body' :
-          switch ($mode) {
-            case 'full' :
-              $vars['attributes_array']['data-eq-pts'] = 'medium: 580, large: 750';
-              break;
-          }
-          break;
-      }
-      break;
-  }
+  // switch ($bundle) {
+  //   case 'client' :
+  //     switch ($name) {
+  //       case 'field_image_plus' :
+  //         switch ($mode) {
+  //           case 'full' :
+  //             // $vars['attributes_array']['data-eq-pts'] = 'medium: 580, large: 750';
+  //             break;
+  //         }
+  //         break;
+  //     }
+  //     break;
+  // }
 }
 
 /**

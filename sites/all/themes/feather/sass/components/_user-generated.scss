@@ -11,13 +11,14 @@
 @import "user-generated/mixins";
 @import "user-generated/extends";
 
-.fluid-media {
-  @extend %body-unpad;
-  img {
-    box-shadow: $cool-white-shade 0 0 0 5px;
+.user-generated {
+  .field-image {
+    @extend %body-unpad;
+    img {
+      box-shadow: $cool-white-shade 0 0 0 5px;
+    }
   }
 }
-
 .media-youtube-video {
   @extend %body-unpad;
   @include ir(640/380, 100%, "iframe");

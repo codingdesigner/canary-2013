@@ -276,17 +276,17 @@ $golden-2-gutter: 1/25;
 
 .article--body {
   @include clearfix;
-  .grouping {
+  .field-image-plus {
     clear: both;
   }
   &[data-eq-state="medium"] {
-    .content-image {
+    .field-image {
       max-width: 50%;
     }
     .file-video {
       width: 50%;
     }
-    .content-image, .file-video {
+    .field-image, .file-video {
       clear: right;
       float: right;
       margin-left: 1em;
@@ -294,24 +294,24 @@ $golden-2-gutter: 1/25;
     }
   }
   &[data-eq-state="large"] {
-    .content-image {
+    .field-image {
       max-width: $small-phi-percent;
     }
     .file-video {
       width: $small-phi-percent;
     }
-    .content-image, .file-video {
+    .field-image, .file-video {
       margin-bottom: $base-line-em;
     }
-    .grouping:nth-of-type(odd) {
-      .content-image, .file-video {
+    .field-image-plus:nth-of-type(odd) {
+      .field-image, .file-video {
         clear: right;
         float: right;
         margin-left: 1em;
       }
     }
-    .grouping:nth-of-type(even) {
-      .content-image, .file-video {
+    .field-image-plus:nth-of-type(even) {
+      .field-image, .file-video {
         clear: left;
         float: left;
         margin-right: 1em;

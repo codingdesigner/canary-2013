@@ -104,8 +104,10 @@
   </div>
   <section class="our-work">
     <h1 class="section-title">Our Work</h1>
-    <?php print render($content['body']); ?>
-    {{> molecules-body-with-media }}
+    <div class="base--STYLED user-generated article--body" data-eq-pts="medium: 580, large: 750">
+      <?php print render($content['body']); ?>
+      <?php print render($content['field_image_plus']); ?>
+    </div>
     <div class="asides" data-eq-pts="medium: 450">
       {{> molecules-case-study-link }}
       {{> molecules-event }}
