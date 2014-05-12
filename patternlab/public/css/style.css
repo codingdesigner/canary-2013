@@ -1788,13 +1788,17 @@ blockquote h1 {
   margin-top: 1.625em;
   margin-bottom: 1.625em;
 }
-
-.name {
+.media-contact .profile {
+  margin-top: 0;
+}
+.media-contact .field-full-name {
   font-weight: 600;
 }
-
-.label {
+.media-contact .field-label {
   font-style: italic;
+}
+.media-contact .inline {
+  display: inline;
 }
 
 .file-downloads--client:after {
