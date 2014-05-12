@@ -109,14 +109,16 @@
       <?php print render($content['field_image_plus']); ?>
     </div>
     <div class="asides" data-eq-pts="medium: 450">
-      {{> molecules-case-study-link }}
-      {{> molecules-event }}
-      {{> molecules-links }}
+      <?php print render($content['field_case_study']); ?>
+      <?php print render($content['field_event']); ?>
+      <?php print render($content['field_link']); ?>
     </div>
   </section>
   <section class="for-the-media">
     <h1 class="section-title">For the Media</h1>
-    {{> molecules-press-release-links }}
+    <?php print render($content['field_press_releases']); ?>
+    <?php print render($content['field_user_contact']); ?>
+    <hr>
     {{> molecules-media-contact }}
     {{> molecules-download-images }}
   </section>

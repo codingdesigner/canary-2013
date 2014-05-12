@@ -110,10 +110,16 @@ function feather_preprocess_node(&$vars, $hook) {
  *   The name of the template being rendered ("field" in this case.)
  */
 function feather_preprocess_field(&$vars, $hook) {
+  // dpm($vars);
   if (isset($vars['items'][0]['node'])) {
     $node = reset($vars['items'][0]['node']);
     $vars['theme_hook_suggestions'][] = 'field__' .  $vars['element']['#field_name'] . '__' . $node['#view_mode'];
   }
+
+  // paths
+  $vars['base_path'] = base_path();
+  $vars['theme_path'] = path_to_theme();
+
   /* Set shortcut variables. Hooray for less typing! */
   /* reference: http://atendesigngroup.com/blog/adding-css-classes-fields-drupal */
   $name = $vars['element']['#field_name'];
@@ -129,9 +135,10 @@ function feather_preprocess_field(&$vars, $hook) {
   // switch ($bundle) {
   //   case 'client' :
   //     switch ($name) {
-  //       case 'field_image_plus' :
+  //       case 'field_link' :
   //         switch ($mode) {
   //           case 'full' :
+  //             dpm($vars);
   //             // $vars['attributes_array']['data-eq-pts'] = 'medium: 580, large: 750';
   //             break;
   //         }
