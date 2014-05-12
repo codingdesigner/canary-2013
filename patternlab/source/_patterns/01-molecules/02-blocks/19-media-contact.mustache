@@ -1,12 +1,15 @@
 <section class="media-contact">
   <h3>Media Contact</h3>
-  <div class="name">{{ name.first }} {{ name.last }}</div>
-  <div class="phone">
-    <span class="label">Phone: </span>
-    {{ phone }}
-  </div>
-  <div class="email">
-    <span class="label">email: </span>
-    <a href="{{ url }}">{{ email }}</a>
-  </div>
+  <article role="article" class="profile">
+    <div class="field-full-name">{{ name.first }} {{ name.last }}</div>
+    <div class="field-user-title">{{ name.title }}</div>
+    <div class="phone">
+      <span class="field-label">Phone:</span>
+      <div class="field-phone inline">{{ phone }}</div>
+    </div>
+    <div class="email">
+      <span class="field-label">Email:</span>
+      <div class="field-email inline"><a href="{{ url }}">Contact Form</a></div>
+    </div>
+    <hr></article>
 </section>
