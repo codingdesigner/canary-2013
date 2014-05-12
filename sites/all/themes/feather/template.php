@@ -116,6 +116,7 @@ function feather_preprocess_field(&$vars, $hook) {
     $vars['theme_hook_suggestions'][] = 'field__' .  $vars['element']['#field_name'] . '__' . $node['#view_mode'];
   }
   // dpm($vars);
+  // dpm($vars['theme_hook_suggestions']);
 
   // paths
   $vars['base_path'] = base_path();

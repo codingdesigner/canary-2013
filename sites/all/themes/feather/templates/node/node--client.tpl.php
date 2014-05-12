@@ -118,8 +118,8 @@
     <h1 class="section-title">For the Media</h1>
     <?php print render($content['field_press_releases']); ?>
     <?php print render($content['field_user_contact']); ?>
+    <?php print render($content['field_images']); ?>
     <hr>
-    {{> molecules-media-contact }}
     {{> molecules-download-images }}
   </section>
   {{> molecules-media-placements }}

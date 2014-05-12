@@ -27,7 +27,6 @@
  *
  * @see template_preprocess_user_profile()
  */
-// dpm(get_defined_vars());
 ?>
 <article role="article" class="profile"<?php print $attributes; ?>>
   <?php print render($user_profile['field_full_name']); ?>
@@ -38,6 +37,5 @@
   <div class="email">
     <?php print render($user_profile['field_email']); ?>
   </div>
-<hr>
   <?php print render($user_profile); ?>
 </article>
