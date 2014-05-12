@@ -55,17 +55,24 @@
 .media-contact {
   margin-top: $base-line-em;
   margin-bottom: $base-line-em;
+  .profile {
+    margin-top: 0;
+  }
   h3 {
     @extend %subsection-block-heading;
   }
+  .field-full-name {
+    font-weight: 600;
+  }
+  .field-label {
+    font-style: italic;
+  }
+  .inline {
+    display: inline;
+  }
 }
 
-.name {
-  font-weight: 600;
-}
-.label {
-  font-style: italic;
-}
+
 
 
 $file-downloads-grid: 2;

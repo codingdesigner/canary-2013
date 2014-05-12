@@ -99,6 +99,7 @@ function feather_preprocess_node(&$vars, $hook) {
   $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
   $vars['classes_array'][] = $vars['type'];
   $vars['classes_array'][] = "_" . $vars['type'];
+  // dpm($vars);
 }
 
 /**
@@ -110,11 +111,11 @@ function feather_preprocess_node(&$vars, $hook) {
  *   The name of the template being rendered ("field" in this case.)
  */
 function feather_preprocess_field(&$vars, $hook) {
-  // dpm($vars);
   if (isset($vars['items'][0]['node'])) {
     $node = reset($vars['items'][0]['node']);
     $vars['theme_hook_suggestions'][] = 'field__' .  $vars['element']['#field_name'] . '__' . $node['#view_mode'];
   }
+  // dpm($vars);
 
   // paths
   $vars['base_path'] = base_path();
@@ -146,6 +147,18 @@ function feather_preprocess_field(&$vars, $hook) {
   //     }
   //     break;
   // }
+
+  switch ($name) {
+    case 'field_email' :
+      switch ($bundle) {
+        case 'user' :
+          foreach ($vars['items'] as &$item) {
+            $item = l(t('Contact Form'), 'user/' . $vars['element']['#object']->uid . '/contact');
+          }
+          break;
+      }
+      break;
+  }
 }
 
 /**
