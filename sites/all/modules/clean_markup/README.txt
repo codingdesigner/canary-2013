@@ -114,7 +114,12 @@ INSTALLATION
    configure them.
 
    A block's clean markup settings can be changed from the block's settings
-   page. See https://drupal.org/node/1576532 for further information.
+   page. See https://drupal.org/node/1576532 for further information. Note that
+   if your theme (or your theme's base theme) has it's own block.tpl.php file,
+   the Clean markup settings you choose may not take effect. In this case, you
+   will need to copy modules/clean_markup_blocks/block.tpl.php from this module
+   into your theme. See https://drupal.org/node/341628 and
+   https://drupal.org/node/173880#template-override for further information.
 
    A panel pane's clean markup settings can be administered by changing the pane
    style to "Clean markup" (click the gear in the top-right of a pane and click
@@ -177,4 +182,5 @@ CREDITS
 -------
 
 Concept by rhache. Coding by mparker17 and anandps with assistance from rhache.
-Sponsored by Myplanet Digital (http://www.myplanetdigital.com)
+Sponsored by Myplanet Digital (http://www.myplanetdigital.com) and OpenConcept
+Consulting (http://openconcept.ca/).

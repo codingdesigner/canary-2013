@@ -3,9 +3,9 @@ description = Functions common to the clean markup suite.
 core = 7.x
 package = Clean markup
 
-; Information added by Drupal.org packaging script on 2013-12-19
-version = "7.x-2.3"
+; Information added by Drupal.org packaging script on 2014-02-15
+version = "7.x-2.4"
 core = "7.x"
 project = "clean_markup"
-datestamp = "1387422226"
+datestamp = "1392476913"
 

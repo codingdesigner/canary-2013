@@ -1,6 +1,14 @@
 Clean Markup 7.x-2.x, xxxx-xx-xx
 --------------------------------
 
+Clean Markup 7.x-2.4, 2014-02-15
+--------------------------------
+
+#2104239 by mparker17, attisan | kruser: No such file errors, and blocks don't
+  display when used with Mothership theme.
+Refactored $variables to $vars in clean_markup_blocks_preprocess_block for
+  consistency with clean_markup_blocks and to make the function easier to read.
+
 Clean Markup 7.x-2.3, 2013-12-18
 --------------------------------
 

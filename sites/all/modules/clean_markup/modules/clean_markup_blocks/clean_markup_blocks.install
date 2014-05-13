@@ -71,3 +71,13 @@ function clean_markup_blocks_update_7203(&$sandbox) {
   $defaults['additional_block_attributes'] = '';
   variable_set('clean_markup_blocks-defaults', $defaults);
 }
+
+/**
+ * Flushes all caches.
+ */
+function clean_markup_blocks_update_7204(&$sandbox) {
+  // To fix #2104239, we removed one hook implementation, added a different hook
+  // implementation, and moved a template file. Clear caches so Drupal picks up
+  // on the changes.
+  drupal_flush_all_caches();
+}

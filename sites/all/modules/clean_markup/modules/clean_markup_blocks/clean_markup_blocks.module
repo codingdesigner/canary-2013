@@ -209,80 +209,96 @@ function _clean_markup_blocks_generate_prefix($module, $delta) {
 /**
  * Implements MODULE_preprocess_HOOK().
  */
-function clean_markup_blocks_preprocess_block(&$variables) {
+function clean_markup_blocks_preprocess_block(&$vars) {
   // Load defaults.
   $defaults = variable_get('clean_markup_blocks-defaults');
 
   // Get settings for this block.
-  $variable_name = _clean_markup_blocks_generate_prefix($variables['block']->module, $variables['block']->delta);
+  $variable_name = _clean_markup_blocks_generate_prefix($vars['block']->module, $vars['block']->delta);
   $current_block_settings = variable_get($variable_name, $defaults);
 
   // Copy simple settings into variables.
-  $variables['block_wrapper'] = $current_block_settings['block_wrapper'];
-  $variables['inner_div'] = $current_block_settings['enable_inner_div'];
+  $vars['block_wrapper'] = $current_block_settings['block_wrapper'];
+  $vars['inner_div'] = $current_block_settings['enable_inner_div'];
   if (module_exists('token')) {
-    $variables['additional_attributes'] = token_replace($current_block_settings['additional_block_attributes'], array('global'));
+    $vars['additional_attributes'] = token_replace($current_block_settings['additional_block_attributes'], array('global'));
   }
   else {
-    $variables['additional_attributes'] = $current_block_settings['additional_block_attributes'];
+    $vars['additional_attributes'] = $current_block_settings['additional_block_attributes'];
   }
 
   // Pad additional_attributes.
-  if (!empty($variables['additional_attributes'])) {
-    $variables['additional_attributes'] = str_pad($variables['additional_attributes'], strlen($variables['additional_attributes']) + 2 ,' ', STR_PAD_BOTH);
+  if (!empty($vars['additional_attributes'])) {
+    $vars['additional_attributes'] = str_pad($vars['additional_attributes'], strlen($vars['additional_attributes']) + 2 ,' ', STR_PAD_BOTH);
   }
 
   // Convert the additional block classes into an array, then merge into the
   // existing classes array. Note the use of check_plain to prevent XSS.
-  $variables['classes_array'] = array_merge(
-    $variables['classes_array'],
+  $vars['classes_array'] = array_merge(
+    $vars['classes_array'],
     explode(' ', check_plain($current_block_settings['additional_block_classes']))
   );
 
   // Only output a title if one is set.
-  if ($variables['block']->subject) {
-    $variables['title'] = array(
-      '#prefix' => render($variables['title_prefix']),
-      '#suffix' => render($variables['title_suffix']),
+  if ($vars['block']->subject) {
+    $vars['title'] = array(
+      '#prefix' => render($vars['title_prefix']),
+      '#suffix' => render($vars['title_suffix']),
       '#type' => 'html_tag',
       '#tag' => $current_block_settings['title_wrapper'],
-      '#attributes' => isset($variables['title_attributes']) ? $variables['title_attributes'] : array(),
-      '#value' => $variables['block']->subject,
+      '#attributes' => isset($vars['title_attributes']) ? $vars['title_attributes'] : array(),
+      '#value' => $vars['block']->subject,
     );
-    $variables['title']['#attributes']['class'] = array(
+    $vars['title']['#attributes']['class'] = array(
       'title',
       'block-title',
     );
     if ($current_block_settings['title_hide']) {
-      $variables['title']['#attributes']['class'][] = 'element-invisible';
+      $vars['title']['#attributes']['class'][] = 'element-invisible';
     }
+
+    // Core's block.tpl.php assumes the block subject is a string. While this is
+    // a different variable entirely, it's worth being consistent.
+    $vars['title'] = render($vars['title']);
   }
   else {
-    $variables['title'] = array();
+    $vars['title'] = '';
   }
 
   // Only wrap the content if the user wants a wrapper.
   if ($current_block_settings['content_wrapper'] !== CLEAN_MARKUP_NO_ELEMENT) {
-    $variables['content'] = array(
+    $vars['content'] = array(
       '#type' => 'html_tag',
       '#tag' => $current_block_settings['content_wrapper'],
       '#attributes' => array(
         'class' => array('content'),
       ),
-      '#value' => $variables['content'],
+      '#value' => $vars['content'],
     );
-    $variables['content']['#attributes'] += $variables['content_attributes_array'];
+    $vars['content']['#attributes'] += $vars['content_attributes_array'];
+
+    // Core's block.tpl.php assumes the content is a string (it doesn't call
+    // render() on it). Even though we're overriding that tpl file, it's worth
+    // being consistent.
+    $vars['content'] = render($vars['content']);
   }
 
   // Output the block HTML ID as a class if requested.
   if ($current_block_settings['block_html_id_as_class']) {
-    $variables['classes_array'][] = $variables['block_html_id'];
+    $vars['classes_array'][] = $vars['block_html_id'];
   }
 }
 
 /**
- * Implements hook_theme_registry_alter().
+ * Implements hook_theme().
  */
-function clean_markup_blocks_theme_registry_alter(&$theme_registry) {
-  $theme_registry['block']['template'] = drupal_get_path('module', 'clean_markup_blocks') . '/theme/block';
+function clean_markup_blocks_theme($existing, $type, $theme, $path) {
+  // Return our own block theme-hook implementation, which will override core's
+  // block module's implementation.
+  return array(
+    'block' => array(
+      'render element' => 'elements',
+      'template' => 'block',
+    ),
+  );
 }
