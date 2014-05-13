@@ -55,7 +55,7 @@ BLOCK;
 
   // CANARY ADDRESS
   if ($block_name == 'canary_address') {
-    $copyright_date = date(Y);
+    $copyright_date = date("Y");
     $block_content = <<<BLOCK
     <section class="address">
       <h1>Our Address</h1>
