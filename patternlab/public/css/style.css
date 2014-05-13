@@ -1837,7 +1837,8 @@ blockquote h1 {
   padding-left: 0.25em;
   padding-right: 0.25em;
 }
-.file-download--image figcaption .credit {
+
+.field-caption {
   color: #8e8e8e;
 }
 
