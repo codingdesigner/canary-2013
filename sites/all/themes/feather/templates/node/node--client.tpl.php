@@ -119,10 +119,9 @@
     <?php print render($content['field_press_releases']); ?>
     <?php print render($content['field_user_contact']); ?>
     <?php print render($content['field_images']); ?>
-    <hr>
-    {{> molecules-download-images }}
   </section>
-  {{> molecules-media-placements }}
+
+  <?php print render($content['field_media_placements']); ?>
 
   <?php print render($content['links']); ?>
   <?php print render($content['comments']); ?>

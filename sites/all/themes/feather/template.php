@@ -116,7 +116,6 @@ function feather_preprocess_field(&$vars, $hook) {
     $vars['theme_hook_suggestions'][] = 'field__' .  $vars['element']['#field_name'] . '__' . $node['#view_mode'];
   }
   // dpm($vars);
-  // dpm($vars['theme_hook_suggestions']);
 
   // paths
   $vars['base_path'] = base_path();
@@ -216,4 +215,8 @@ function feather_preprocess_image(&$variables) {
 // function feather_preprocess_panels_pane(&$vars) {}
 
 
-// function feather_preprocess_file_entity(&$vars) {}
+function feather_preprocess_file_entity(&$vars) {
+  if($vars['view_mode'] == 'media_link') {
+    $vars['classes_array'][] = "file-download--image";
+  }
+}

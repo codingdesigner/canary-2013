@@ -117,14 +117,15 @@ $file-downloads-gutter: 1/18;
   figcaption {
     padding-left: 0.25em;
     padding-right: 0.25em;
-    .credit {
-      color: $gray;
-    }
   }
 }
 
 .linked-image {
   @extend %link-unset-background-extend;
+}
+
+.field-caption {
+  color: $gray;
 }
 
 .media-placements {

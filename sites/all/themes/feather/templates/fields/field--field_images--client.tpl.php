@@ -18,8 +18,6 @@
   <?php endif; ?>
 
   <?php foreach ($items as $delta => $item): ?>
-    <figure class="file-download--image <?php print $classes; ?>"<?php print $attributes; ?>>
-      <?php print render($item); ?>
-    </figure>
+    <?php print render($item); ?>
   <?php endforeach; ?>
 </section>
