@@ -286,24 +286,24 @@ a:active {
   background-image: linear-gradient(to top, #13769d 1px, #fafcfd 2px);
 }
 
-.menu-trigger, .section-title a, .press-room li a, .social-media a, .linked-image {
+.menu-trigger, .section-title a, .press-room li a, .social-media a, .linked-image, ul.primary li a {
   text-decoration: none;
   text-shadow: none;
   background-image: none;
 }
-.menu-trigger:visited, .section-title a:visited, .press-room li a:visited, .social-media a:visited, .linked-image:visited {
+.menu-trigger:visited, .section-title a:visited, .press-room li a:visited, .social-media a:visited, .linked-image:visited, ul.primary li a:visited {
   text-shadow: none;
   background-image: none;
 }
-.menu-trigger:focus, .section-title a:focus, .press-room li a:focus, .social-media a:focus, .linked-image:focus {
+.menu-trigger:focus, .section-title a:focus, .press-room li a:focus, .social-media a:focus, .linked-image:focus, ul.primary li a:focus {
   text-shadow: none;
   background-image: none;
 }
-.menu-trigger:hover, .section-title a:hover, .press-room li a:hover, .social-media a:hover, .linked-image:hover {
+.menu-trigger:hover, .section-title a:hover, .press-room li a:hover, .social-media a:hover, .linked-image:hover, ul.primary li a:hover {
   text-shadow: none;
   background-image: none;
 }
-.menu-trigger:active, .section-title a:active, .press-room li a:active, .social-media a:active, .linked-image:active {
+.menu-trigger:active, .section-title a:active, .press-room li a:active, .social-media a:active, .linked-image:active, ul.primary li a:active {
   text-shadow: none;
   background-image: none;
 }
@@ -349,6 +349,22 @@ a:active {
   background-image: -moz-linear-gradient(bottom, #e1edf2 1px, #f08c49 2px);
   background-image: -webkit-linear-gradient(bottom, #e1edf2 1px, #f08c49 2px);
   background-image: linear-gradient(to top, #e1edf2 1px, #f08c49 2px);
+}
+
+ul.primary li a:not(.button) {
+  color: #fefefe;
+}
+ul.primary li a:not(.button):visited {
+  color: #fefefe;
+}
+ul.primary li a:not(.button):focus {
+  color: #fefefe;
+}
+ul.primary li a:not(.button):hover {
+  color: #e1edf2;
+}
+ul.primary li a:not(.button):active {
+  color: #e1edf2;
 }
 
 input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=time], input[type=number], input[type=range], input[type=search], input[type=color], select, textarea {
@@ -2080,6 +2096,44 @@ blockquote h1 {
   margin-left: 0;
   margin-right: 0;
   clear: both;
+}
+
+ul.primary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #e1edf2;
+  padding: 0.25em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+ul.primary:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ul.primary li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+ul.primary li a {
+  padding: 3px 0.25em;
+  background-color: #13769d;
+}
+ul.primary li a:hover {
+  background-color: #f08c49;
+}
+ul.primary li.active a {
+  background-color: #f08c49;
 }
 
 .sg-swatch.black {
