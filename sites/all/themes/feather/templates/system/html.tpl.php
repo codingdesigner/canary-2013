@@ -39,6 +39,7 @@
  * @see template_preprocess_html()
  * @see template_process()
  */
+// dpm(get_defined_vars());
 ?><!DOCTYPE html>
 <!--[if lt IE <?php print $minie; ?> ]>    <html class="lt-ie<?php print $minie; ?> no-js" <?php print $html_attributes; ?>> <![endif]-->
 <!--[if gte IE <?php print $minie; ?>]><!--> <html class="no-js" <?php print $html_attributes; ?> <?php print $rdf_attributes; ?>> <!--<![endif]-->
@@ -51,7 +52,10 @@
   </head>
   <body class="<?php print $classes; ?>" <?php print $body_attributes;?>>
     <div id="skip-link">
-      <a href="#main" class="menu-trigger icon-canary" role="link"><?php print t('menu'); ?></a>
+      <a href="#main" class="menu-trigger icon-canary" role="link">
+      <?php include './' . $base_path . $theme_path . '/includes/hamburger-menu-svg.inc'; ?>
+      <span class="menu-label"><?php print t('menu'); ?></span>
+      </a>
     </div>
     <?php print $page_top; ?>
     <?php print $page; ?>

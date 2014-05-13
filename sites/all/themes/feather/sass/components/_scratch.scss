@@ -348,3 +348,36 @@ $golden-2-gutter: 1/25;
     }
   }
 }
+
+
+
+/////////
+// DRUPAL TABS
+/////////
+ul.primary {
+  @include inline-block-list(0.25em);
+  background-color: $blue-very-light;
+  padding: 0.25em;
+  margin: {
+    top: 0.5em;
+    bottom: 0.5em;
+  }
+  li {
+    a {
+      @extend %link-unset-background-extend;
+      padding: 3px 0.25em;
+      background-color: $blue;
+      @extend %tab-links;
+      &:hover {
+        background-color: $orange;
+      }
+    }
+    &.active {
+      a {
+        background-color: $orange;
+      }
+    }
+  }
+}
+
+

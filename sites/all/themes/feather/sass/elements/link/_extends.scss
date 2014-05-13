@@ -37,3 +37,7 @@
   @include set-link-colors($orange-darkerer, $white, $white, $orange-darkerer, $orange-darkerer, $extend: false);
   @include set-background-links($orange-less-light, $blue-very-light, $blue-very-light, $orange-less-light, $blue-very-light, $bkg: $orange, $extend: false);
 }
+
+%tab-links {
+  @include set-link-colors($white, $blue-very-light, $blue-very-light, $white, $white, $extend: false);
+}

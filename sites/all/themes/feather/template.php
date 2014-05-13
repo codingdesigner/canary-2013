@@ -34,7 +34,11 @@ function feather_preprocess_maintenance_page(&$vars, $hook) {
 /**
  * Implements hook_preprocess_html().
  */
-// function feather_preprocess_html(&$vars) {}
+function feather_preprocess_html(&$vars) {
+  // paths
+  $vars['base_path'] = base_path();
+  $vars['theme_path'] = path_to_theme();
+}
 
 /**
  * Implements hook_preprocess_page().
