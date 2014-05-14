@@ -380,4 +380,70 @@ ul.primary {
   }
 }
 
+/////////
+// MANAGEMENT MENU
+/////////
+// #footer {
+//   .block-system, .block-user {
+//     background-color: $orange-darker;
+//     padding: 0.25em;
+//     margin: {
+//       top: 0.5em;
+//       bottom: 0.5em;
+//     }
+//     .form-required {
+//       color: $white;
+//     }
+//     .block-title {
+//       @extend %h4;
+//     }
+//     label {
+//       display: inline;
+//     }
+//     .form-item {
+//       display: inline;
+//     }
+//     a {
+//       @extend %link-unset-background-extend;
+//     }
+//   }
+
+//   ul.menu {
+//     border: none;
+//     list-style: none;
+//     text-align: left; /* LTR */
+//     li {
+//       margin: 0 0 0 0.5em; /* LTR */
+//       &.extended {
+//         list-style-image: url(../../misc/menu-expanded.png);
+//         list-style-type: circle;
+//       }
+//       &.collapsed {
+//         list-style-image: url(../../misc/menu-collapsed.png); /* LTR */
+//         list-style-type: disc;
+//       }
+//       &.leaf {
+//         list-style-image: url(../../misc/menu-leaf.png);
+//         list-style-type: square;
+//       }
+//       &.expanded, &.collapsed, &.leaf {
+//         padding: 0.2em 0.5em 0 0; /* LTR */
+//         margin: 0;
+//       }
+//     }
+//   }
+//   li {
+//     a.active {
+//       color: #000;
+//     }
+//   }
+//   td.menu-disabled {
+//     background: #ccc;
+//   }
+// }
+
+
+
+
+
 
