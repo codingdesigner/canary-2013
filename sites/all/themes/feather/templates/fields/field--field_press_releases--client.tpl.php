@@ -51,7 +51,7 @@
   <ul>
     <?php foreach ($items as $delta => $item): ?>
       <li>
-        <?php include './' . $base_path . $theme_path . '/includes/bubble-svg.inc'; ?>
+        <?php include './' . $base_path . $theme_path . '/images/svg/bubble.svg'; ?>
         <div class="press-title-link"><?php print render($item); ?></div>
       </li>
     <?php endforeach; ?>

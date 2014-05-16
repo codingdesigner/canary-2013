@@ -53,7 +53,7 @@
   <body class="<?php print $classes; ?>" <?php print $body_attributes;?>>
     <div id="skip-link">
       <a href="#main" class="menu-trigger icon-canary" role="link">
-      <?php include './' . $base_path . $theme_path . '/includes/hamburger-menu-svg.inc'; ?>
+      <?php include './' . $base_path . $theme_path . '/images/svg/hamburger-menu.svg'; ?>
       <span class="menu-label"><?php print t('menu'); ?></span>
       </a>
     </div>
