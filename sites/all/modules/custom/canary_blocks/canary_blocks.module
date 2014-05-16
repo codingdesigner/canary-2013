@@ -15,7 +15,7 @@ function canary_blocks_block_view($block_name = '') {
 
   // SVG LOGO
   if ($block_name == 'svg_logo') {
-    $svg_logo = drupal_get_path('theme', 'feather') . '/includes/logo-svg.inc';
+    $svg_logo = drupal_get_path('theme', 'feather') . '/images/svg/logo.svg';
     $block_content = <<<BLOCK
        <a href="/" class="logo-site-name">
          <div class="logo">
@@ -37,7 +37,7 @@ BLOCK;
 
   // FOOTER LOGO TITLE
   if ($block_name == 'footer_logo_title') {
-    $svg_logo = drupal_get_path('theme', 'feather') . '/includes/logo-svg.inc';
+    $svg_logo = drupal_get_path('theme', 'feather') . '/images/svg/logo.svg';
     $block_content = <<<BLOCK
        <a href="/" class="footer-logo-site-name">
          <div class="footer-logo">
