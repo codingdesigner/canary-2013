@@ -6,11 +6,15 @@
 	"img": {
 		"landscape-4x3": {
 			"src": "../../images/fm_4x3.png",
-			"alt": "4x3 Image"
+			"alt": "4x3 Image",
+			"title": "4x3 Title",
+			"caption": "4x3 Caption"
 		},
 		"landscape-16x9": {
 			"src": "../../images/fm_16x9.png",
-			"alt": "16x9 Image"
+			"alt": "16x9 Image",
+			"title": "16x9 Title",
+			"caption": "16x9 Caption"
 		},
 		"logo": {
 			"src": "../../images/logo.png",
